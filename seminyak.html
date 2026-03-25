@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Villa Seminyak — Shambala Villas Bali</title>
+  <meta name="description" content="A five-bedroom private villa in the heart of Seminyak. 20-metre pool, traditional joglo architecture, lush tropical gardens, private chef." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     NAVBAR
+     ════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="nav-logo-link">
+      <img src="images/shared/logo.png" alt="Shambala Villas" class="nav-logo" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="lembongan.html" class="nav-link">Lembongan</a></li>
+      <li><a href="seminyak.html" class="nav-link active">Seminyak</a></li>
+      <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      <li><a href="index.html#contact" class="nav-book">Book Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="lembongan.html" class="nav-link">Lembongan</a>
+  <a href="seminyak.html" class="nav-link">Seminyak</a>
+  <a href="gallery.html" class="nav-link">Gallery</a>
+  <a href="index.html#contact" class="nav-link">Contact</a>
+  <a href="index.html#contact" class="nav-book">Book Now</a>
+</div>
+
+<!-- ════════════════════════════════════════
+     HERO
+     ════════════════════════════════════════ -->
+<section class="hero-villa">
+  <video autoplay muted loop playsinline preload="auto">
+    <source src="videos/seminyak/villa-seminyak-tour.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-villa-content">
+    <div style="max-width:1280px;margin:0 auto;width:100%;padding:0 2.5rem;">
+      <span class="label">Seminyak, Bali</span>
+      <h1>Villa Seminyak</h1>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     DESCRIPTION
+     ════════════════════════════════════════ -->
+<section class="desc-section">
+  <div class="container">
+    <div class="desc-grid">
+      <div class="desc-text reveal">
+        <span class="label">The Villa</span>
+        <h2>Traditional architecture, contemporary luxury</h2>
+        <span class="rule rule-l" style="margin-top:1.25rem;margin-bottom:1.5rem"></span>
+        <p>Set in the heart of Seminyak — Bali's most coveted address — Villa Seminyak is a masterpiece of traditional Javanese joglo architecture reimagined for modern luxury living. Towering hand-carved timber pavilions rise above lush tropical gardens, creating an atmosphere of extraordinary calm.</p>
+        <p>A spectacular 20-metre swimming pool forms the heart of the estate, flanked by sun loungers, an outdoor dining pavilion, and a BBQ terrace shaded by towering palms. Five generous ensuite bedrooms, each with its own character and garden outlook, ensure total privacy for every guest.</p>
+        <p>Just minutes from Oberoi Street, Ku De Ta, and Seminyak's finest dining, yet completely removed from the world — a rare balance that only Shambala can offer.</p>
+        <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+          <a href="index.html#contact" class="btn btn-gold">Enquire Now</a>
+          <a href="gallery.html" class="btn btn-outline-dk">View Gallery</a>
+        </div>
+      </div>
+      <div class="desc-img reveal reveal-d2">
+        <img src="images/seminyak/shambalavillabali_1670462036_2988374613089862684_52884410060_1.jpg"
+             alt="Villa Seminyak" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     GALLERY
+     ════════════════════════════════════════ -->
+<section class="gallery-section">
+  <div class="container" style="margin-bottom:2rem">
+    <span class="label reveal">Photography</span>
+    <h2 class="reveal reveal-d1">The Villa in Pictures</h2>
+  </div>
+
+  <div class="masonry" id="gallery">
+    <div class="masonry-item reveal" onclick="openLightbox(0)">
+      <img src="images/seminyak/shambalavillabali_1650000064_2816727150481957683_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal reveal-d1" onclick="openLightbox(1)">
+      <img src="images/seminyak/shambalavillabali_1650098269_2817550956121490971_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal reveal-d2" onclick="openLightbox(2)">
+      <img src="images/seminyak/shambalavillabali_1651908037_2832732394051546210_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal" onclick="openLightbox(3)">
+      <img src="images/seminyak/shambalavillabali_1651916836_2832806198383715403_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal reveal-d1" onclick="openLightbox(4)">
+      <img src="images/seminyak/shambalavillabali_1670231906_2986444142716725154_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal reveal-d2" onclick="openLightbox(5)">
+      <img src="images/seminyak/shambalavillabali_1670462036_2988374613089862684_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal" onclick="openLightbox(6)">
+      <img src="images/seminyak/shambalavillabali_1670482068_2988542657773266270_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal reveal-d1" onclick="openLightbox(7)">
+      <img src="images/seminyak/shambalavillabali_1670736230_2990674721196902341_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal reveal-d2" onclick="openLightbox(8)">
+      <img src="images/seminyak/shambalavillabali_1674805499_3024810222090515448_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal" onclick="openLightbox(9)">
+      <img src="images/seminyak/shambalavillabali_1677373908_3046355602491495638_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal reveal-d1" onclick="openLightbox(10)">
+      <img src="images/seminyak/shambalavillabali_1679969020_3068124980356565166_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal reveal-d2" onclick="openLightbox(11)">
+      <img src="images/seminyak/shambalavillabali_1681091887_3077544266571276183_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal" onclick="openLightbox(12)">
+      <img src="images/seminyak/shambalavillabali_1682490538_3089276998916089732_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal reveal-d1" onclick="openLightbox(13)">
+      <img src="images/seminyak/shambalavillabali_1684021685_3102121191725781675_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal reveal-d2" onclick="openLightbox(14)">
+      <img src="images/seminyak/shambalavillabali_1692517523_3173389447215966849_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal" onclick="openLightbox(15)">
+      <img src="images/seminyak/shambalavillabali_1695695092_3200044833687615585_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal reveal-d1" onclick="openLightbox(16)">
+      <img src="images/seminyak/shambalavillabali_1697001833_3211006567273315998_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal reveal-d2" onclick="openLightbox(17)">
+      <img src="images/seminyak/shambalavillabali_1708471698_3307222773247932665_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal" onclick="openLightbox(18)">
+      <img src="images/seminyak/shambalavillabali_1720229181_3405851689851967490_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal reveal-d1" onclick="openLightbox(19)">
+      <img src="images/seminyak/shambalavillabali_1724581344_3442360273715475835_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal reveal-d2" onclick="openLightbox(20)">
+      <img src="images/seminyak/shambalavillabali_1730379712_3491000513842529129_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal" onclick="openLightbox(21)">
+      <img src="images/seminyak/shambalavillabali_1734343012_3524247077527245414_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal reveal-d1" onclick="openLightbox(22)">
+      <img src="images/seminyak/shambalavillabali_1740216864_3573520520898001275_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+    <div class="masonry-item reveal reveal-d2" onclick="openLightbox(23)">
+      <img src="images/seminyak/shambalavillabali_1743734679_3603030095885444689_52884410060_1.jpg" alt="Villa Seminyak" loading="lazy" />
+      <div class="masonry-ov"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     GUEST REVIEWS
+     ════════════════════════════════════════ -->
+<section class="villa-reviews-section">
+  <div class="container">
+    <span class="label reveal">Guest Experiences</span>
+    <h2 class="reveal reveal-d1">What Our Guests Say</h2>
+    <div class="villa-reviews-grid">
+
+      <div class="villa-review-card reveal reveal-d1">
+        <div class="review-stars">
+          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Absolutely incredible villa — the pool is stunning and the chef prepared the most amazing meals every evening. The staff anticipated our every need. We will be back!"</p>
+        <div class="review-author">
+          <div class="review-name">Rob</div>
+          <span class="review-badge badge-google">Google</span>
+        </div>
+      </div>
+
+      <div class="villa-review-card reveal reveal-d2">
+        <div class="review-stars">
+          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"We spent a week at Villa Seminyak for our honeymoon and it was everything we dreamed of. The joglo architecture is breathtaking and the location is perfect — close to everything but so peaceful inside."</p>
+        <div class="review-author">
+          <div class="review-name">Marine</div>
+          <span class="review-badge badge-google">Google</span>
+        </div>
+      </div>
+
+      <div class="villa-review-card reveal reveal-d3">
+        <div class="review-stars">
+          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Brought the whole family — grandparents, kids, everyone. The villa handled 10 of us with ease. The private chef was a highlight; the kids still talk about his breakfasts. Cannot recommend enough."</p>
+        <div class="review-author">
+          <div class="review-name">Angus</div>
+          <span class="review-badge badge-google">Google</span>
+        </div>
+      </div>
+
+      <div class="villa-review-card reveal reveal-d4">
+        <div class="review-stars">
+          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"One of the most beautiful places I've ever stayed. The pool, the gardens, the architecture — it's like nothing else in Seminyak. Service was warm and impeccable from start to finish."</p>
+        <div class="review-author">
+          <div class="review-name">Anonymous</div>
+          <span class="review-badge badge-google">Google</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     AMENITIES
+     ════════════════════════════════════════ -->
+<section class="amenities-section">
+  <div class="container">
+    <span class="label reveal">Inclusions</span>
+    <h2 class="reveal reveal-d1">Villa Amenities</h2>
+    <div class="amenities-grid">
+      <div class="amenity reveal reveal-d1">
+        <div class="amenity-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="16" rx="2"/><path d="M2 14c1.5-2 3-2 4.5 0s3 2 4.5 0 3-2 4.5 0 3 2 4.5 0"/></svg></div>
+        <div class="amenity-name">20-Metre Swimming Pool</div>
+      </div>
+      <div class="amenity reveal reveal-d2">
+        <div class="amenity-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="8" width="20" height="12" rx="2"/><path d="M2 12h20M7 8V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg></div>
+        <div class="amenity-name">5 Ensuite Bedrooms</div>
+      </div>
+      <div class="amenity reveal reveal-d3">
+        <div class="amenity-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M6 21v-4M18 21v-4M4 17h16"/><path d="M12 3a5 5 0 0 1 5 5H7a5 5 0 0 1 5-5z"/></svg></div>
+        <div class="amenity-name">Private Chef</div>
+      </div>
+      <div class="amenity reveal reveal-d4">
+        <div class="amenity-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 21c0 0-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2"/></svg></div>
+        <div class="amenity-name">Spa Room</div>
+      </div>
+      <div class="amenity reveal reveal-d1">
+        <div class="amenity-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M8 4v16M16 4v16"/><circle cx="12" cy="12" r="2"/></svg></div>
+        <div class="amenity-name">Media Lounge</div>
+      </div>
+      <div class="amenity reveal reveal-d2">
+        <div class="amenity-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 21V10M12 10c0-4 3-7 3-7s-1 4 1 6M12 10c0-4-3-7-3-7s1 4-1 6"/><path d="M6 21h12"/></svg></div>
+        <div class="amenity-name">Tropical Gardens</div>
+      </div>
+      <div class="amenity reveal reveal-d3">
+        <div class="amenity-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 11l9-9 9 9M5 9v11h14V9"/><path d="M9 21v-6h6v6"/></svg></div>
+        <div class="amenity-name">Outdoor Dining Pavilion</div>
+      </div>
+      <div class="amenity reveal reveal-d4">
+        <div class="amenity-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 2c0 0-5 5-5 10a5 5 0 0 0 10 0c0-5-5-10-5-10z"/><path d="M12 12v7M9 19h6"/></svg></div>
+        <div class="amenity-name">BBQ Area</div>
+      </div>
+      <div class="amenity reveal reveal-d1">
+        <div class="amenity-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12.5a7 7 0 0 1 14 0"/><path d="M8 16a4 4 0 0 1 8 0"/><path d="M11 19.5a1 1 0 0 1 2 0"/></svg></div>
+        <div class="amenity-name">High-Speed Wifi</div>
+      </div>
+      <div class="amenity reveal reveal-d2">
+        <div class="amenity-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/><line x1="19.07" y1="4.93" x2="4.93" y2="19.07"/></svg></div>
+        <div class="amenity-name">Air Conditioning</div>
+      </div>
+      <div class="amenity reveal reveal-d3">
+        <div class="amenity-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="4" y1="20" x2="14" y2="10"/><path d="M14 10l2-2 4 4-2 2"/><path d="M14 10l-4-4 1.5-1.5a3 3 0 0 1 4.24 0L17 6"/></svg></div>
+        <div class="amenity-name">Daily Housekeeping</div>
+      </div>
+      <div class="amenity reveal reveal-d4">
+        <div class="amenity-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="3" y1="21" x2="21" y2="21"/><line x1="3" y1="7" x2="21" y2="7"/><rect x="6" y="7" width="3" height="14"/><rect x="15" y="7" width="3" height="14"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg></div>
+        <div class="amenity-name">Traditional Joglo Architecture</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     LOCATION
+     ════════════════════════════════════════ -->
+<section class="location-section">
+  <div class="container">
+    <span class="label reveal">Location</span>
+    <h2 class="reveal reveal-d1">Seminyak, Bali</h2>
+    <p class="reveal reveal-d2" style="max-width:580px;margin-top:1rem">Steps from Oberoi Street and Bali's finest restaurants, beach clubs, and boutiques — yet tucked behind private gates where the noise of the world cannot follow. Seminyak is Bali's most glamorous address, and Villa Seminyak sits at its heart.</p>
+  </div>
+  <div class="map-wrap reveal" style="margin-top:3rem">
+    <iframe
+      src="https://maps.google.com/maps?q=-8.6867097,115.1592329&z=17&output=embed"
+      allowfullscreen
+      loading="lazy"
+      title="Villa Seminyak location">
+    </iframe>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     BOOKING CTA
+     ════════════════════════════════════════ -->
+<section class="booking-cta">
+  <div class="container">
+    <span class="label" style="color:var(--gold)">Reserve Your Stay</span>
+    <h2>Begin Your Seminyak Story</h2>
+    <p>Contact our villa concierge team and we will design a stay perfectly suited to you.</p>
+    <a href="index.html#contact" class="btn btn-gold">Send a Booking Enquiry</a>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="images/shared/logo.png" alt="Shambala Villas" class="footer-logo" />
+        <p class="footer-desc">Two extraordinary private villas in Bali, crafted for those who seek beauty, privacy, and the art of slow living.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Our Villas</h4>
+        <ul>
+          <li><a href="lembongan.html">Villa Lembongan</a></li>
+          <li><a href="seminyak.html">Villa Seminyak</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Information</h4>
+        <ul>
+          <li><a href="index.html#contact">Rates &amp; Availability</a></li>
+          <li><a href="index.html#contact">Booking Enquiry</a></li>
+          <li><a href="index.html#contact">Private Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="https://instagram.com/theshambalalembongan" target="_blank">@theshambalalembongan</a></li>
+          <li><a href="https://instagram.com/shambalavillabali" target="_blank">@shambalavillabali</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-btm">
+      <p class="footer-copy">&copy; 2026 Shambala Villas Bali. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/theshambalalembongan" target="_blank">Instagram Lembongan</a>
+        <a href="https://instagram.com/shambalavillabali" target="_blank">Instagram Seminyak</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════════
+     LIGHTBOX
+     ════════════════════════════════════════ -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeLightbox()">&#215;</button>
+  <button class="lb-nav lb-prev" onclick="shiftLightbox(-1)">&#8592;</button>
+  <img class="lb-img" id="lb-img" src="" alt="" />
+  <button class="lb-nav lb-next" onclick="shiftLightbox(1)">&#8594;</button>
+  <div class="lb-count" id="lb-count"></div>
+</div>
+
+<!-- ════════════════════════════════════════
+     SCRIPTS
+     ════════════════════════════════════════ -->
+<script>
+  const images = [
+    'images/seminyak/shambalavillabali_1650000064_2816727150481957683_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1650098269_2817550956121490971_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1651908037_2832732394051546210_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1651916836_2832806198383715403_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1670231906_2986444142716725154_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1670462036_2988374613089862684_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1670482068_2988542657773266270_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1670736230_2990674721196902341_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1674805499_3024810222090515448_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1677373908_3046355602491495638_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1679969020_3068124980356565166_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1681091887_3077544266571276183_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1682490538_3089276998916089732_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1684021685_3102121191725781675_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1692517523_3173389447215966849_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1695695092_3200044833687615585_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1697001833_3211006567273315998_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1708471698_3307222773247932665_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1720229181_3405851689851967490_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1724581344_3442360273715475835_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1730379712_3491000513842529129_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1734343012_3524247077527245414_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1740216864_3573520520898001275_52884410060_1.jpg',
+    'images/seminyak/shambalavillabali_1743734679_3603030095885444689_52884410060_1.jpg',
+  ];
+
+  let current = 0;
+
+  function openLightbox(i) {
+    current = i;
+    updateLightbox();
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function shiftLightbox(dir) {
+    current = (current + dir + images.length) % images.length;
+    updateLightbox();
+  }
+
+  function updateLightbox() {
+    document.getElementById('lb-img').src = images[current];
+    document.getElementById('lb-count').textContent = (current + 1) + ' / ' + images.length;
+  }
+
+  document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!document.getElementById('lightbox').classList.contains('active')) return;
+    if (e.key === 'ArrowRight') shiftLightbox(1);
+    if (e.key === 'ArrowLeft')  shiftLightbox(-1);
+    if (e.key === 'Escape')     closeLightbox();
+  });
+
+  // Navbar scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    hamburger.classList.remove('open'); mobileMenu.classList.remove('open');
+  }));
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
