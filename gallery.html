@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery — Shambala Villas Bali</title>
   <meta name="description" content="Browse the full photo gallery of Villa Lembongan and Villa Seminyak — two extraordinary private villas in Bali." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <style>
     .masonry-item { transition: opacity 0.35s ease, transform 0.35s ease; }
@@ -23,9 +26,10 @@
     </a>
     <ul class="nav-links">
       <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="lembongan.html" class="nav-link">Lembongan</a></li>
-      <li><a href="seminyak.html" class="nav-link">Seminyak</a></li>
+      <li><a href="lembongan.html" class="nav-link">Villa Lembongan</a></li>
+      <li><a href="seminyak.html" class="nav-link">Villa Seminyak</a></li>
       <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+      <li><a href="booking.html" class="nav-link">Availability</a></li>
       <li><a href="index.html#contact" class="nav-link">Contact</a></li>
       <li><a href="index.html#contact" class="nav-book">Book Now</a></li>
     </ul>
@@ -37,9 +41,10 @@
 
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html" class="nav-link">Home</a>
-  <a href="lembongan.html" class="nav-link">Lembongan</a>
-  <a href="seminyak.html" class="nav-link">Seminyak</a>
+  <a href="lembongan.html" class="nav-link">Villa Lembongan</a>
+  <a href="seminyak.html" class="nav-link">Villa Seminyak</a>
   <a href="gallery.html" class="nav-link">Gallery</a>
+  <a href="booking.html" class="nav-link">Availability</a>
   <a href="index.html#contact" class="nav-link">Contact</a>
   <a href="index.html#contact" class="nav-book">Book Now</a>
 </div>
@@ -599,5 +604,13 @@
   }, { threshold: 0.06 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/6282247675859" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </svg>
+  <span class="wa-tooltip">Chat with us</span>
+</a>
 </body>
 </html>

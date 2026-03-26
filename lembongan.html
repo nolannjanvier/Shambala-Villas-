@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Villa Lembongan — Shambala Villas Bali</title>
   <meta name="description" content="A five-bedroom luxury villa perched on the sunset cliffs of Nusa Lembongan. Infinity pool, ocean views, private chef, and unrivalled tranquility." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -19,11 +23,12 @@
     </a>
     <ul class="nav-links">
       <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="lembongan.html" class="nav-link active">Lembongan</a></li>
-      <li><a href="seminyak.html" class="nav-link">Seminyak</a></li>
+      <li><a href="lembongan.html" class="nav-link active">Villa Lembongan</a></li>
+      <li><a href="seminyak.html" class="nav-link">Villa Seminyak</a></li>
       <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="booking.html" class="nav-link">Availability</a></li>
       <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-      <li><a href="index.html#contact" class="nav-book">Book Now</a></li>
+      <li><a href="#enquiry" class="nav-book">Book Now</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -33,11 +38,12 @@
 
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html" class="nav-link">Home</a>
-  <a href="lembongan.html" class="nav-link">Lembongan</a>
-  <a href="seminyak.html" class="nav-link">Seminyak</a>
+  <a href="lembongan.html" class="nav-link">Villa Lembongan</a>
+  <a href="seminyak.html" class="nav-link">Villa Seminyak</a>
   <a href="gallery.html" class="nav-link">Gallery</a>
+  <a href="booking.html" class="nav-link">Availability</a>
   <a href="index.html#contact" class="nav-link">Contact</a>
-  <a href="index.html#contact" class="nav-book">Book Now</a>
+  <a href="#enquiry" class="nav-book">Book Now</a>
 </div>
 
 <!-- ════════════════════════════════════════
@@ -70,7 +76,7 @@
         <p>The centrepiece is a breathtaking infinity pool that appears to merge seamlessly with the horizon — a place to drift, to reflect, and to watch the sun dissolve into the sea each evening.</p>
         <p>Your private chef will craft personalised menus drawing on the finest local produce, while the dedicated housekeeping team ensures every moment of your stay is effortless.</p>
         <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
-          <a href="index.html#contact" class="btn btn-gold">Enquire Now</a>
+          <a href="#enquiry" class="btn btn-gold">Enquire Now</a>
           <a href="gallery.html" class="btn btn-outline-dk">View Gallery</a>
         </div>
       </div>
@@ -198,83 +204,62 @@
 
       <div class="villa-review-card reveal reveal-d1">
         <div class="review-stars">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <p class="review-text">If you like interior design or architecture you'll love this place. The huge pool is absolute perfection with a lagoon entrance, a little pier, hammock, in-pool lounger overlooking the cliff with gorgeous sunsets and dolphins passing by and a waterfall down to another pool — it's just out of this world!</p>
-        <div class="villa-review-footer">
-          <span class="villa-review-author">Sarah</span>
-          <span class="review-badge badge-airbnb">Airbnb</span>
-        </div>
+        <p class="review-text">"If you like interior design or architecture you'll love this place. The huge pool is absolute perfection with a lagoon entrance, a little pier, hammock, in-pool lounger overlooking the cliff with gorgeous sunsets and dolphins passing by and a waterfall down to another pool. It's just out of this world!"</p>
+        <span class="review-name">Sarah</span>
       </div>
 
       <div class="villa-review-card reveal reveal-d2">
         <div class="review-stars">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <p class="review-text">Perched on the cliff, facing the ocean, with breathtaking sunsets every evening. The decor, the furniture, and the overall atmosphere are of an exceptional standard. A special shout-out to Yudi, the villa manager, who was absolutely fantastic.</p>
-        <div class="villa-review-footer">
-          <span class="villa-review-author">Margaux</span>
-          <span class="review-badge badge-airbnb">Airbnb</span>
-        </div>
+        <p class="review-text">"Perched on the cliff, facing the ocean, with breathtaking sunsets every evening. The decor, the furniture, and the overall atmosphere are of an exceptional standard. A special shout-out to Yudi, the villa manager, who was absolutely fantastic."</p>
+        <span class="review-name">Margaux</span>
       </div>
 
       <div class="villa-review-card reveal reveal-d1">
         <div class="review-stars">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <p class="review-text">I took my wife there for her 40th birthday, and it turned out to be the most beautiful place we've ever stayed. The staff went out of their way to ensure we had everything we needed. If you're looking for beauty, luxury, and exceptional service, this is it.</p>
-        <div class="villa-review-footer">
-          <span class="villa-review-author">Danny</span>
-          <span class="review-badge badge-google">
-            <svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-            Google
-          </span>
-        </div>
+        <p class="review-text">"I took my wife there for her 40th birthday, and it turned out to be the most beautiful place we've ever stayed. The staff went out of their way to ensure we had everything we needed."</p>
+        <span class="review-name">Danny Allen-Page</span>
       </div>
 
       <div class="villa-review-card reveal reveal-d2">
         <div class="review-stars">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <p class="review-text">We spotted dolphins while enjoying breakfast — such a magical experience! The design and décor blend beautifully with the natural surroundings, an amazing swimming pool with a stunning ocean backdrop.</p>
-        <div class="villa-review-footer">
-          <span class="villa-review-author">Federica</span>
-          <span class="review-badge badge-airbnb">Airbnb</span>
-        </div>
+        <p class="review-text">"We spotted dolphins while enjoying breakfast. Such a magical experience! The design and decor blend beautifully with the natural surroundings, an amazing swimming pool with a stunning ocean backdrop."</p>
+        <span class="review-name">Federica</span>
       </div>
 
-      <div class="villa-review-card reveal" style="grid-column:1/-1;max-width:560px">
+      <div class="villa-review-card reveal">
         <div class="review-stars">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <p class="review-text">Of all the places we stayed in Bali, this was by far the best. Do yourself a favor and book this place. The decor is perfect. The staff are incredible. The owners were my favorite.</p>
-        <div class="villa-review-footer">
-          <span class="villa-review-author">Lisa</span>
-          <span class="review-badge badge-google">
-            <svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-            Google
-          </span>
-        </div>
+        <p class="review-text">"Of all the places we stayed in Bali, this was by far the best. Do yourself a favor and book this place. The decor is perfect. The staff are incredible. The owners were my favorite."</p>
+        <span class="review-name">Lisa Rotondi</span>
       </div>
 
     </div>
@@ -402,6 +387,149 @@
 </section>
 
 <!-- ════════════════════════════════════════
+     VILLA DETAILS ACCORDION
+     ════════════════════════════════════════ -->
+<section class="accordion-section">
+  <div class="container">
+    <span class="label reveal">Villa Details</span>
+    <h2 class="reveal reveal-d1">Everything You Need to Know</h2>
+    <div class="accordion-list">
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" type="button">
+          Services included
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            Welcome drink and fresh towels upon check-in. Pick up and drop off from Lembongan's boat pier. Daily breakfast prepared from our menu (8:00 AM to 10:00 AM). Daily housekeeping (7:00 AM to 8:00 PM). Dedicated villa manager reachable anytime. Night security guard (9:00 PM to 6:00 AM).
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" type="button">
+          Bedrooms
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            Five bedrooms with king-size beds and ensuite bathrooms with ocean views. All bedrooms are soundproofed. Master suite includes bathtub with ocean view. Bedroom 3 can be configured as family suite with kids' bunk beds.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" type="button">
+          Design and architecture
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            Architect-designed by a renowned French architect. Interiors curated by a French interior designer. Custom-made furnishings with soft linens, natural fibers, and artisan-crafted pieces. Seamless indoor-outdoor layout with natural materials including stone, wood, and textured finishes.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" type="button">
+          Villa features
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            Open-plan living and dining. Uninterrupted 270 degree ocean and sunset views. 22-metre infinity pool (largest on the island). Two private plunge pools. Petanque court, billiard table, kids' board game corner. Wine fridge, Nespresso machine, SONY sound system, fast Starlink Wi-Fi. Safety box and hair dryer in every bedroom. BBQ equipment. Electrical generator. Exterior CCTV.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" type="button">
+          Living spaces
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            Light-filled open-concept living and dining with panoramic ocean views. Designer kitchen for private chef experiences. Bar and entertainment area with billiard table, wine fridge, cigar selection. Dining for 10 guests overlooking the ocean. Multiple sun decks with private sunbeds outside each room. Fire-pit terrace with sunset views. Upper-level deck with bean bags for stargazing.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" type="button">
+          Extras on request
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            Private chef. BBQ. In-house massages with ocean view. Private yoga, boxing, and fitness sessions. Pool fence rental. Jet ski adventures (10% discount for guests). Additional pastries from Let's Bake (one day advance order).
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" type="button">
+          Getting to Lembongan
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            Fast boats depart daily from Sanur Harbour to Nusa Lembongan. Preferred arrival at Jungutbatu Beach or Mushroom Bay, with 20+ round trips per day. Our team will welcome you at the harbor and escort you to the villa.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" type="button">
+          Check-in and check-out
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            Check-in from 2:00 PM. Check-out until 11:00 AM. Luggage storage available before check-in or after check-out at the villa or at Let's Bake Cafe on Jungutbatu beach.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" type="button">
+          Good to know
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            The Shambala is a completely private villa with exclusive use, private entrance, and private parking. Fireworks are strictly forbidden by law on the island. Pets are not allowed.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     AVAILABILITY CALENDAR
+     ════════════════════════════════════════ -->
+<section class="availability-section">
+  <div class="container">
+    <div class="cal-hero-header" style="background-image: url('images/lembongan/theshambalalembongan_1677754034_3049544323854868066_56937094430_1.jpg')">
+      <div class="cal-hero-overlay"></div>
+      <span class="label" style="color:var(--gold)">Nusa Lembongan</span>
+      <h2 style="color:var(--cream)">Check Availability</h2>
+    </div>
+    <div class="cal-nav-row" style="margin-top:2rem">
+      <button class="cal-nav-main" id="lem-prev">&#8592; Previous</button>
+      <button class="cal-nav-main" id="lem-next">Next &#8594;</button>
+    </div>
+    <div class="cal-months-wrap" id="lem-cal-wrap"></div>
+    <div class="cal-legend">
+      <div class="cal-legend-item"><div class="cal-legend-swatch available"></div> Available</div>
+      <div class="cal-legend-item"><div class="cal-legend-swatch occupied"></div> Occupied</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
      LOCATION
      ════════════════════════════════════════ -->
 <section class="location-section">
@@ -410,13 +538,81 @@
     <h2 class="reveal reveal-d1">Nusa Lembongan, Bali</h2>
     <p class="reveal reveal-d2" style="max-width:580px;margin-top:1rem">A serene island escape just 30 minutes by fast boat from Sanur. Nusa Lembongan offers crystal-clear waters, vibrant coral reefs, and a peace far removed from the mainland's bustle.</p>
   </div>
-  <div class="map-wrap reveal" style="margin-top:3rem">
-    <iframe
-      src="https://maps.google.com/maps?q=-8.6838351,115.4278918&z=17&output=embed"
-      allowfullscreen
-      loading="lazy"
-      title="Villa Lembongan location">
-    </iframe>
+  <div style="margin-top:3rem">
+    <div id="villa-map" style="width:100%;height:440px;border-radius:4px;"></div>
+    <div class="map-details">
+      <div>
+        <div class="map-detail-name">Nusa Lembongan</div>
+        <div class="map-detail-addr">Nusa Lembongan, Klungkung, Bali 80771</div>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=-8.6838351,115.4278918" target="_blank" rel="noopener" class="map-directions-link">Get directions →</a>
+      </div>
+      <div class="map-detail-dist">~45 min by boat from Sanur Harbour</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ ENQUIRY FORM ════ -->
+<section class="contact-section villa-enquiry-section" id="enquiry">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <span class="label">Enquire</span>
+        <h2>Plan Your Stay</h2>
+        <span class="rule rule-l" style="margin-top:1.25rem;margin-bottom:1.5rem"></span>
+        <p>Share your travel dates and preferences and our villa manager will respond within 24 hours with a personalised proposal.</p>
+        <div class="c-detail">
+          <div class="c-detail-lbl">Villa</div>
+          <div class="c-detail-val">Villa Lembongan, Nusa Lembongan, Bali</div>
+        </div>
+        <div class="c-detail">
+          <div class="c-detail-lbl">WhatsApp</div>
+          <div class="c-detail-val"><a href="https://wa.me/6282247675859" style="color:var(--gold)">+62 822 4767 5859</a></div>
+        </div>
+      </div>
+      <div class="contact-form reveal reveal-d2">
+        <form id="enquiryFormLembongan" onsubmit="submitVillaForm(event,'enquiryFormLembongan','successLembongan')">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="lname">Full Name</label>
+              <input type="text" id="lname" name="name" required placeholder="Your name" />
+            </div>
+            <div class="form-group">
+              <label for="lemail">Email Address</label>
+              <input type="email" id="lemail" name="email" required placeholder="your@email.com" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="lcheckin">Check-In Date</label>
+              <input type="date" id="lcheckin" name="checkin" />
+            </div>
+            <div class="form-group">
+              <label for="lcheckout">Check-Out Date</label>
+              <input type="date" id="lcheckout" name="checkout" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="lmessage">Your Message</label>
+            <textarea id="lmessage" name="message" placeholder="Group size, special requests…"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label-static">Additional Services</label>
+            <div class="service-checks">
+              <label class="svc-check"><input type="checkbox" name="services" value="chef" /><span>Private Chef</span></label>
+              <label class="svc-check"><input type="checkbox" name="services" value="boat" /><span>Private Boat</span></label>
+              <label class="svc-check"><input type="checkbox" name="services" value="airport" /><span>Airport Pick Up</span></label>
+              <label class="svc-check"><input type="checkbox" name="services" value="grocery" /><span>Grocery Shopping</span></label>
+              <label class="svc-check"><input type="checkbox" name="services" value="spa" /><span>Spa Booking</span></label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-gold">Send Enquiry</button>
+        </form>
+        <div id="successLembongan" style="display:none">
+          <h3 style="font-family:var(--serif);font-size:1.6rem">Thank You</h3>
+          <p>Your enquiry has been received. Our villa manager will be in touch within 24 hours.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -428,7 +624,7 @@
     <span class="label" style="color:var(--gold)">Reserve Your Stay</span>
     <h2>Begin Your Lembongan Story</h2>
     <p>Reach out to our villa concierge team and we will craft a stay tailored to your every wish.</p>
-    <a href="index.html#contact" class="btn btn-gold">Send a Booking Enquiry</a>
+    <a href="#enquiry" class="btn btn-gold">Send a Booking Enquiry</a>
   </div>
 </section>
 
@@ -574,6 +770,112 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Accordion
+  document.querySelectorAll('.accordion-trigger').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const body = this.nextElementSibling;
+      const isOpen = body.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.accordion-body').forEach(b => b.classList.remove('open'));
+      document.querySelectorAll('.accordion-trigger').forEach(t => t.classList.remove('active'));
+      // Toggle current
+      if (!isOpen) {
+        body.classList.add('open');
+        this.classList.add('active');
+      }
+    });
+  });
+
+  // Calendar
+  (function() {
+    const VILLA = 'lembongan';
+    let offsetMonths = 0;
+    let occupiedDates = {};
+
+    fetch('data/availability.json')
+      .then(r => r.json())
+      .then(data => {
+        occupiedDates = data[VILLA] || {};
+        renderCalendars();
+      })
+      .catch(() => renderCalendars());
+
+    function renderCalendars() {
+      const wrap = document.getElementById('lem-cal-wrap');
+      wrap.innerHTML = '';
+      const today = new Date();
+      for (let i = 0; i < 3; i++) {
+        const d = new Date(today.getFullYear(), today.getMonth() + offsetMonths + i, 1);
+        wrap.appendChild(buildMonth(d, today));
+      }
+    }
+
+    function buildMonth(date, today) {
+      const year = date.getFullYear();
+      const month = date.getMonth();
+      const wrap = document.createElement('div');
+      wrap.className = 'cal-wrap';
+      const title = new Date(year, month, 1).toLocaleString('default', { month: 'long', year: 'numeric' });
+      wrap.innerHTML = '<div class="cal-header"><span class="cal-title">' + title + '</span></div>';
+      const grid = document.createElement('div');
+      grid.className = 'cal-grid';
+      const days = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+      days.forEach(d => { const h = document.createElement('div'); h.className = 'cal-day-header'; h.textContent = d; grid.appendChild(h); });
+      const firstDay = new Date(year, month, 1).getDay();
+      const startOffset = (firstDay === 0) ? 6 : firstDay - 1;
+      for (let e = 0; e < startOffset; e++) {
+        const empty = document.createElement('div'); empty.className = 'cal-cell empty'; grid.appendChild(empty);
+      }
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      for (let day = 1; day <= daysInMonth; day++) {
+        const cell = document.createElement('div');
+        cell.className = 'cal-cell';
+        const key = year + '-' + String(month+1).padStart(2,'0') + '-' + String(day).padStart(2,'0');
+        if (occupiedDates[key] === 'occupied') cell.classList.add('occupied');
+        const isToday = (today.getFullYear() === year && today.getMonth() === month && today.getDate() === day);
+        if (isToday) cell.classList.add('today');
+        cell.textContent = day;
+        grid.appendChild(cell);
+      }
+      wrap.appendChild(grid);
+      return wrap;
+    }
+
+    document.getElementById('lem-prev').addEventListener('click', () => { offsetMonths--; renderCalendars(); });
+    document.getElementById('lem-next').addEventListener('click', () => { offsetMonths++; renderCalendars(); });
+  })();
+
+  function submitVillaForm(e, formId, successId) {
+    e.preventDefault();
+    document.getElementById(formId).style.display = 'none';
+    document.getElementById(successId).style.display = 'block';
+  }
+</script>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/6282247675859" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </svg>
+  <span class="wa-tooltip">Chat with us</span>
+</a>
+
+<script src="js/config.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+<script>
+  mapboxgl.accessToken = MAPBOX_TOKEN;
+  const map = new mapboxgl.Map({
+    container: 'villa-map',
+    style: 'mapbox://styles/mapbox/outdoors-v12',
+    center: [115.4278918, -8.6838351],
+    zoom: 15,
+    scrollZoom: false
+  });
+  new mapboxgl.Marker({ color: '#B8956A' })
+    .setLngLat([115.4278918, -8.6838351])
+    .addTo(map);
+  map.addControl(new mapboxgl.NavigationControl(), 'top-right');
 </script>
 </body>
 </html>

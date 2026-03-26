@@ -2,7 +2,7 @@
    SHAMBALA VILLAS — SHARED STYLESHEET
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap');
 
 /* ── Variables ── */
 :root {
@@ -66,14 +66,44 @@ p  { font-size: 0.95rem; line-height: 1.9; color: var(--charcoal-lt); font-weigh
   letter-spacing: 0.18em;
   text-transform: uppercase;
   border: none;
+  border-radius: 3px;
   transition: var(--ease);
 }
-.btn-gold         { background: var(--gold); color: var(--white); }
-.btn-gold:hover   { background: var(--gold-dk); transform: translateY(-2px); }
-.btn-outline-w    { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.5); }
+.btn-gold {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  font-family: var(--serif);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.65rem 1.75rem;
+  border-radius: 3px;
+  transition: background 0.25s, color 0.25s;
+}
+.btn-gold:hover {
+  background: var(--gold);
+  color: #fff;
+}
+.btn-outline-w    { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.5); border-radius: 3px; }
 .btn-outline-w:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
-.btn-outline-dk   { background: transparent; color: var(--charcoal); border: 1px solid var(--charcoal); }
-.btn-outline-dk:hover { background: var(--charcoal); color: var(--white); }
+.btn-outline-dk {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: var(--serif);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.65rem 1.75rem;
+  border-radius: 3px;
+  transition: background 0.25s, color 0.25s;
+}
+.btn-outline-dk:hover {
+  background: var(--gold);
+  color: #fff;
+}
+/* .card-cta styles defined below in villa cards section */
 
 /* ============================================================
    NAVBAR
@@ -83,12 +113,13 @@ p  { font-size: 0.95rem; line-height: 1.9; color: var(--charcoal-lt); font-weigh
   height: var(--nav-h);
   display: flex; align-items: center;
   padding: 0 2.5rem;
+  background: transparent;
   transition: background 0.45s ease, box-shadow 0.45s ease;
 }
 .navbar.scrolled {
-  background: rgba(245,240,235,0.97);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 1px 24px rgba(0,0,0,0.07);
+  background: rgba(44,44,44,0.96);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 24px rgba(0,0,0,0.18);
 }
 .navbar-inner {
   display: flex; align-items: center; justify-content: space-between;
@@ -101,10 +132,10 @@ p  { font-size: 0.95rem; line-height: 1.9; color: var(--charcoal-lt); font-weigh
 .nav-links { display: flex; align-items: center; gap: 2.25rem; }
 
 .nav-link {
-  font-family: var(--sans);
-  font-size: 0.67rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
+  font-family: var(--serif);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.9);
   transition: color 0.3s;
@@ -118,18 +149,28 @@ p  { font-size: 0.95rem; line-height: 1.9; color: var(--charcoal-lt); font-weigh
 }
 .nav-link:hover::after, .nav-link.active::after { width: 100%; }
 .nav-link:hover { color: var(--gold-lt); }
-.navbar.scrolled .nav-link { color: var(--charcoal); }
-.navbar.scrolled .nav-link:hover { color: var(--gold); }
+.navbar.scrolled .nav-link { color: rgba(255,255,255,0.9); }
+.navbar.scrolled .nav-link:hover { color: var(--gold-lt); }
+
+/* Dot separators removed */
+/* .nav-links li:not(:last-child)::after { removed } */
 
 .nav-book {
-  font-family: var(--sans);
-  font-size: 0.67rem; font-weight: 500;
-  letter-spacing: 0.15em; text-transform: uppercase;
-  background: var(--gold); color: var(--white);
-  padding: 11px 26px;
-  transition: var(--ease);
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  font-family: var(--serif);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.45rem 1.2rem;
+  border-radius: 3px;
+  transition: background 0.25s, color 0.25s;
 }
-.nav-book:hover { background: var(--gold-dk); }
+.nav-book:hover {
+  background: var(--gold);
+  color: #fff;
+}
 
 /* Hamburger */
 .hamburger {
@@ -141,7 +182,7 @@ p  { font-size: 0.95rem; line-height: 1.9; color: var(--charcoal-lt); font-weigh
   background: rgba(255,255,255,0.9);
   transition: var(--ease);
 }
-.navbar.scrolled .hamburger span { background: var(--charcoal); }
+.navbar.scrolled .hamburger span { background: rgba(255,255,255,0.9); }
 .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
@@ -235,7 +276,7 @@ p  { font-size: 0.95rem; line-height: 1.9; color: var(--charcoal-lt); font-weigh
 /* ============================================================
    VILLA CARDS (homepage)
    ============================================================ */
-.villas-section { background: var(--cream); padding: 0; }
+.villas-section { background: var(--charcoal); padding: 0; }
 .villas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
 .villa-card {
   position: relative; overflow: hidden;
@@ -265,9 +306,9 @@ p  { font-size: 0.95rem; line-height: 1.9; color: var(--charcoal-lt); font-weigh
 .villa-card-body p  { color: rgba(255,255,255,0.75); font-size: 0.85rem; margin-bottom: 1.5rem; max-width: 300px; }
 .card-cta {
   display: flex; align-items: center; gap: 0.75rem;
-  color: var(--gold-lt); font-size: 0.67rem;
-  letter-spacing: 0.18em; text-transform: uppercase;
-  font-family: var(--sans); font-weight: 500;
+  color: var(--gold-lt); font-size: 0.85rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  font-family: var(--serif); font-weight: 400;
   transition: gap 0.3s;
 }
 .villa-card:hover .card-cta { gap: 1.2rem; }
@@ -276,23 +317,23 @@ p  { font-size: 0.95rem; line-height: 1.9; color: var(--charcoal-lt); font-weigh
 /* ============================================================
    RATES SECTION
    ============================================================ */
-.rates-section { background: var(--charcoal); padding: 100px 0; }
+.rates-section { background: var(--cream); padding: 100px 0; }
 .rates-section .label { color: var(--gold); }
-.rates-intro h2 { color: var(--white); }
-.rates-intro p   { color: rgba(255,255,255,0.5); max-width: 500px; }
+.rates-intro h2 { color: var(--charcoal); }
+.rates-intro p   { color: var(--charcoal-lt); max-width: 500px; }
 .rates-intro .rule { background: var(--gold); }
 .rates-grid {
   display: grid; grid-template-columns: repeat(4,1fr);
   margin-top: 4rem;
-  border: 1px solid rgba(255,255,255,0.07);
+  border: 1px solid rgba(44,44,44,0.1);
 }
 .rate-card {
   padding: 3rem 2rem; text-align: center;
-  border-right: 1px solid rgba(255,255,255,0.07);
+  border-right: 1px solid rgba(44,44,44,0.1);
   transition: background 0.3s;
 }
 .rate-card:last-child { border-right: none; }
-.rate-card:hover { background: rgba(255,255,255,0.04); }
+.rate-card:hover { background: rgba(44,44,44,0.03); }
 .rate-season {
   font-family: var(--sans); font-size: 0.62rem;
   font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase;
@@ -300,22 +341,22 @@ p  { font-size: 0.95rem; line-height: 1.9; color: var(--charcoal-lt); font-weigh
 }
 .rate-price {
   font-family: var(--serif); font-size: clamp(2rem,4vw,3rem);
-  color: var(--white); font-weight: 300;
+  color: var(--charcoal); font-weight: 300;
 }
 .rate-cur { font-size: 1rem; vertical-align: top; margin-top: 0.4em; display: inline-block; }
 .rate-per {
-  font-size: 0.7rem; color: rgba(255,255,255,0.35);
+  font-size: 0.7rem; color: var(--charcoal-lt);
   letter-spacing: 0.1em; font-family: var(--sans);
   margin-top: 0.5rem;
 }
 .rate-dates {
   margin-top: 1.25rem;
-  font-size: 0.68rem; color: rgba(255,255,255,0.3);
+  font-size: 0.68rem; color: var(--charcoal-lt);
   font-family: var(--sans); line-height: 1.7;
 }
 .rates-note {
   text-align: center; margin-top: 3rem;
-  font-size: 0.75rem; color: rgba(255,255,255,0.3);
+  font-size: 0.75rem; color: var(--charcoal-lt);
   font-family: var(--sans);
 }
 
@@ -352,7 +393,7 @@ p  { font-size: 0.95rem; line-height: 1.9; color: var(--charcoal-lt); font-weigh
 /* ============================================================
    CONTACT FORM
    ============================================================ */
-.contact-section { background: var(--cream-dark); padding: 100px 0; }
+.contact-section { background: #fff; padding: 100px 0; }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 7rem; align-items: start; }
 .contact-info h2 { margin-bottom: 1.25rem; }
 .contact-info p  { margin-bottom: 2rem; }
@@ -507,7 +548,7 @@ footer {
 /* ============================================================
    AMENITIES
    ============================================================ */
-.amenities-section { background: var(--cream-dark); padding: 100px 0; }
+.amenities-section { background: var(--cream); padding: 100px 0; }
 .amenities-grid {
   display: grid; grid-template-columns: repeat(4,1fr);
   gap: 2.5rem; margin-top: 3rem;
@@ -615,13 +656,13 @@ footer {
    HOMEPAGE REVIEWS CAROUSEL
    ============================================================ */
 .reviews-section {
-  background: var(--charcoal);
+  background: var(--cream);
   padding: 100px 0;
   overflow: hidden;
 }
 .reviews-section .label { color: var(--gold); }
 .reviews-section .section-hdr { text-align: center; margin-bottom: 3.5rem; }
-.reviews-section h2 { color: var(--white); }
+.reviews-section h2 { color: var(--charcoal); }
 .reviews-section .rule { background: var(--gold); margin: 1.5rem auto; }
 
 .review-carousel {
@@ -639,9 +680,13 @@ footer {
 @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 
 .review-card {
-  text-align: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
   padding: 3rem 2rem;
-  background: rgba(255,255,255,0.04);
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
 }
 .review-stars {
   display: flex;
@@ -652,11 +697,11 @@ footer {
 .review-stars svg { color: var(--gold); }
 .review-text {
   font-family: var(--serif);
-  font-size: clamp(1rem, 2vw, 1.2rem);
   font-style: italic;
-  color: rgba(255,255,255,0.88);
-  line-height: 1.85;
-  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: var(--charcoal);
+  margin-bottom: 1.75rem;
 }
 .review-text::before { content: '\201C'; }
 .review-text::after  { content: '\201D'; }
@@ -664,7 +709,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.3rem;
 }
 .review-author {
   font-family: var(--sans);
@@ -672,7 +717,7 @@ footer {
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
+  color: var(--charcoal-lt);
 }
 .review-badge {
   display: inline-flex;
@@ -698,8 +743,8 @@ footer {
 }
 .carousel-btn {
   background: none;
-  border: 1px solid rgba(255,255,255,0.2);
-  color: rgba(255,255,255,0.5);
+  border: 1px solid rgba(44,44,44,0.2);
+  color: rgba(44,44,44,0.5);
   width: 40px;
   height: 40px;
   display: flex;
@@ -715,7 +760,7 @@ footer {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.2);
+  background: rgba(44,44,44,0.2);
   border: none;
   padding: 0;
   cursor: pointer;
@@ -728,43 +773,57 @@ footer {
    ============================================================ */
 .villa-reviews-section {
   background: var(--cream);
-  padding: 100px 0;
+  padding: 6rem 0;
 }
 .villa-reviews-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem 4rem;
   margin-top: 3rem;
 }
 .villa-review-card {
-  padding: 2.25rem 2.5rem;
-  background: var(--cream-dark);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
 }
-.villa-review-card .review-stars { justify-content: flex-start; }
+.villa-review-card .review-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 1.25rem;
+  justify-content: flex-start;
+}
+.villa-review-card .review-stars svg {
+  width: 12px;
+  height: 12px;
+  fill: var(--gold);
+}
 .villa-review-card .review-text {
   font-family: var(--serif);
-  font-size: 1rem;
   font-style: italic;
-  color: var(--charcoal);
+  font-size: 1.05rem;
   line-height: 1.85;
-  margin: 0;
+  color: var(--charcoal);
+  margin-bottom: 1.5rem;
 }
-.villa-review-card .review-text::before { content: '\201C'; }
-.villa-review-card .review-text::after  { content: '\201D'; }
-.villa-review-footer {
+.villa-review-card .review-author {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: auto;
-  padding-top: 1.25rem;
-  border-top: 1px solid rgba(44,44,44,0.08);
+  flex-direction: column;
+  gap: 0.2rem;
 }
-.villa-review-author {
+.villa-review-card .review-name {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  font-weight: 500;
+}
+/* villa review text already contains quotes in HTML */
+.villa-review-card .review-text::before { content: ''; }
+.villa-review-card .review-text::after  { content: ''; }
+.villa-review-footer { display: none; }
+.villa-review-author-legacy {
   font-family: var(--sans);
   font-size: 0.68rem;
   font-weight: 500;
@@ -776,7 +835,7 @@ footer {
 /* ============================================================
    ACTIVITIES SECTION (Lembongan)
    ============================================================ */
-.activities-section { background: var(--cream-dark); padding: 100px 0; }
+.activities-section { background: #fff; padding: 100px 0; }
 .activities-scroll-wrap {
   overflow-x: auto;
   scrollbar-width: none;
@@ -830,15 +889,15 @@ footer {
   display: grid;
   grid-template-columns: 1.25fr 1fr 1fr 1fr;
   margin-top: 4rem;
-  border: 1px solid rgba(255,255,255,0.07);
+  border: 1px solid rgba(44,44,44,0.1);
 }
 .rate-card-new {
   padding: 2.5rem 2rem;
-  border-right: 1px solid rgba(255,255,255,0.07);
+  border-right: 1px solid rgba(44,44,44,0.1);
   transition: background 0.3s;
 }
 .rate-card-new:last-child { border-right: none; }
-.rate-card-new:hover { background: rgba(255,255,255,0.04); }
+.rate-card-new:hover { background: rgba(44,44,44,0.03); }
 
 .rate-bedrooms {
   display: flex;
@@ -851,26 +910,26 @@ footer {
   justify-content: space-between;
   align-items: baseline;
   padding: 0.65rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
+  border-bottom: 1px solid rgba(44,44,44,0.1);
 }
-.rate-bed-row:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+.rate-bed-row:first-child { border-top: 1px solid rgba(44,44,44,0.1); }
 .rate-bed-lbl {
   font-family: var(--sans);
   font-size: 0.65rem;
-  color: rgba(255,255,255,0.4);
+  color: var(--charcoal-lt);
   letter-spacing: 0.1em;
 }
 .rate-bed-price {
   font-family: var(--serif);
   font-size: 1.35rem;
-  color: var(--white);
+  color: var(--charcoal);
   font-weight: 300;
 }
 .rate-bed-price .small { font-size: 0.75rem; vertical-align: top; margin-top: 0.3em; display: inline-block; }
 .rate-min {
   margin-top: 1.25rem;
   font-size: 0.62rem;
-  color: rgba(255,255,255,0.3);
+  color: var(--charcoal-lt);
   letter-spacing: 0.08em;
   font-family: var(--sans);
 }
@@ -880,12 +939,582 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
   .rate-card-new:nth-child(2) { border-right: none; }
-  .rate-card-new:nth-child(3) { border-top: 1px solid rgba(255,255,255,0.07); }
+  .rate-card-new:nth-child(3) { border-top: 1px solid rgba(44,44,44,0.1); }
 }
 @media (max-width: 560px) {
   .rates-grid-new { grid-template-columns: 1fr; }
-  .rate-card-new { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .rate-card-new { border-right: none; border-bottom: 1px solid rgba(44,44,44,0.1); }
   .villa-reviews-grid { grid-template-columns: 1fr; }
   .activity-card { flex: 0 0 300px; }
   .activity-img { width: 300px; height: 220px; }
+}
+
+/* ============================================================
+   PRESS EDITORIAL (homepage redesign)
+   ============================================================ */
+.press-editorial {
+  background: var(--charcoal);
+  padding: 0;
+}
+.press-editorial-hdr {
+  text-align: center;
+  padding: 100px 2.5rem 60px;
+}
+.press-editorial-hdr .label { color: var(--gold); }
+.press-editorial-hdr h2 { color: var(--white); }
+.press-editorial-hdr .rule { background: var(--gold); margin: 1.5rem auto; }
+
+.press-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+}
+.press-feature.reverse .press-text { order: 2; }
+.press-feature.reverse .press-photo { order: 1; }
+
+.press-text {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.press-pub-label {
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.press-pull-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  line-height: 1.7;
+  color: var(--cream);
+  flex: 1;
+}
+.press-read-link {
+  color: var(--gold);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(184,149,106,0.5);
+  transition: text-decoration-color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.press-read-link:hover { text-decoration-color: var(--gold); }
+
+.press-photo {
+  overflow: hidden;
+}
+.press-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.9s ease;
+}
+.press-feature:hover .press-photo img { transform: scale(1.04); }
+
+@media (max-width: 820px) {
+  .press-feature,
+  .press-feature.reverse {
+    grid-template-columns: 1fr;
+  }
+  .press-feature.reverse .press-text { order: 1; }
+  .press-feature.reverse .press-photo { order: 2; }
+  .press-photo { min-height: 280px; }
+  .press-text { padding: 2.5rem; }
+}
+
+/* ============================================================
+   ACCORDION — VILLA DETAILS
+   ============================================================ */
+.accordion-section {
+  background: var(--cream);
+  padding: 100px 0;
+}
+.accordion-section .label { color: var(--gold); }
+.accordion-section h2 { margin-bottom: 3rem; }
+
+.accordion-list {
+  border-top: 1px solid rgba(184,149,106,0.25);
+}
+.accordion-item {
+  border-bottom: 1px solid rgba(184,149,106,0.25);
+}
+.accordion-trigger {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  text-align: left;
+  transition: color 0.3s, border-left 0.3s, padding-left 0.3s;
+  border-left: 4px solid transparent;
+  padding-left: 0;
+}
+.accordion-trigger.active {
+  color: var(--gold);
+  border-left: 4px solid var(--gold);
+  padding-left: 1rem;
+}
+.accordion-icon {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+.accordion-trigger.active .accordion-icon { transform: rotate(45deg); }
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.accordion-body.open {
+  max-height: 600px;
+}
+.accordion-content {
+  padding: 0 0 1.75rem;
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  color: var(--charcoal-lt);
+  line-height: 1.9;
+  padding-left: 1.25rem;
+  border-left: 4px solid transparent;
+}
+.accordion-trigger.active + .accordion-body .accordion-content {
+  border-left: 4px solid var(--gold);
+}
+
+/* ============================================================
+   AVAILABILITY CALENDAR
+   ============================================================ */
+.availability-section {
+  background: #fff;
+  padding: 100px 0;
+}
+.availability-section .label { color: var(--gold); }
+.availability-section h2 { margin-bottom: 3rem; }
+
+.cal-months-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.cal-wrap {
+  background: var(--cream);
+  padding: 1.5rem;
+}
+.cal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+.cal-title {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--charcoal);
+  letter-spacing: 0.05em;
+}
+.cal-nav-btn {
+  background: none;
+  border: 1px solid rgba(184,149,106,0.4);
+  color: var(--gold);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.3s, border-color 0.3s;
+}
+.cal-nav-btn:hover { background: var(--gold); color: var(--cream); border-color: var(--gold); }
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+.cal-day-header {
+  font-family: var(--sans);
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--charcoal-lt);
+  text-align: center;
+  padding: 0.35rem 0;
+}
+.cal-cell {
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--charcoal);
+  background: var(--cream);
+  border-radius: 2px;
+}
+.cal-cell.empty { background: transparent; }
+.cal-cell.occupied {
+  background: repeating-linear-gradient(
+    45deg,
+    #d4a0a0,
+    #d4a0a0 3px,
+    #f5f0eb 3px,
+    #f5f0eb 10px
+  );
+  color: #999;
+  cursor: default;
+}
+.cal-cell.today {
+  font-weight: 700;
+  color: var(--gold);
+}
+.cal-nav-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.cal-nav-main {
+  background: none;
+  border: 1px solid rgba(184,149,106,0.5);
+  color: var(--gold);
+  padding: 8px 22px;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.cal-nav-main:hover { background: var(--gold); color: var(--cream); }
+.cal-legend {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.cal-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  color: var(--charcoal-lt);
+}
+.cal-legend-swatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.cal-legend-swatch.available { background: var(--cream); border: 1px solid rgba(44,44,44,0.15); }
+.cal-legend-swatch.occupied {
+  background: repeating-linear-gradient(
+    45deg,
+    #d4a0a0,
+    #d4a0a0 3px,
+    #f5f0eb 3px,
+    #f5f0eb 10px
+  );
+  border: 1px solid rgba(44,44,44,0.1);
+}
+
+@media (max-width: 900px) {
+  .cal-months-wrap { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .cal-months-wrap { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   WHATSAPP FLOAT
+   ============================================================ */
+.whatsapp-float {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  width: 52px;
+  height: 52px;
+  background: var(--gold);
+  color: var(--cream);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  z-index: 9000;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(0,0,0,0.28);
+}
+.wa-tooltip {
+  position: absolute;
+  left: 64px;
+  background: var(--charcoal);
+  color: var(--cream);
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.whatsapp-float:hover .wa-tooltip { opacity: 1; }
+
+/* ============================================================
+   ENQUIRY FORM — SERVICE CHECKBOXES
+   ============================================================ */
+.form-label-static {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  margin-bottom: 0.75rem;
+}
+.service-checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.75rem;
+  margin-top: 0.25rem;
+}
+.svc-check {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  color: var(--charcoal);
+  font-weight: 400;
+  text-transform: none;
+}
+.svc-check input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--gold);
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.svc-check input[type="checkbox"]:checked {
+  background: var(--gold);
+}
+.svc-check input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 0px;
+  width: 8px;
+  height: 5px;
+  border-left: 1.5px solid #fff;
+  border-bottom: 1.5px solid #fff;
+  transform: rotate(-45deg);
+}
+
+/* ============================================================
+   REVIEW NAME (prominent) — homepage carousel
+   ============================================================ */
+.review-name-prominent {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--gold-lt);
+}
+
+/* ============================================================
+   HERO BRAND — homepage
+   ============================================================ */
+.hero-brand {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: var(--cream);
+  margin-bottom: 0.75rem;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  display: block;
+}
+
+/* ============================================================
+   FONT HIERARCHY
+   ============================================================ */
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  font-weight: 400;
+}
+.label {
+  font-family: var(--serif);
+  letter-spacing: 0.15em;
+}
+p, li, input, textarea, select, button {
+  font-family: var(--sans);
+}
+.press-feature-quote, .press-quote {
+  font-family: var(--serif);
+  font-style: italic;
+}
+
+/* ============================================================
+   REVIEW STARS — size
+   ============================================================ */
+.review-stars svg { fill: var(--gold); color: var(--gold); }
+
+/* ============================================================
+   CALENDAR — month title serif / cal-hero-header
+   ============================================================ */
+.cal-month-title, .cal-header h3, .cal-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+.cal-hero-header {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+}
+.cal-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26,23,20,0.65);
+}
+.cal-hero-header .label,
+.cal-hero-header h2 {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================
+   MAPBOX MAP DETAILS
+   ============================================================ */
+.map-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem 2rem;
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--cream);
+  border-radius: 3px;
+}
+.map-detail-name {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--charcoal);
+  margin-bottom: 0.2rem;
+}
+.map-detail-addr {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: #666;
+}
+.map-detail-dist {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: #666;
+  text-align: right;
+}
+.map-directions-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-family: var(--serif);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+/* Legacy map detail styles */
+.map-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.map-detail-lbl {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.map-detail-val {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--charcoal);
+}
+
+/* ============================================================
+   VILLA ENQUIRY SECTION
+   ============================================================ */
+.villa-enquiry-section {
+  background: #fff;
+}
+
+/* ============================================================
+   CALENDAR — month title serif
+   ============================================================ */
+.cal-month-title, .cal-nav h3, .cal-header-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+/* ============================================================
+   REVIEW NAME — carousel
+   ============================================================ */
+.review-name {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--charcoal-lt);
 }

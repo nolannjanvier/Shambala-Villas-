@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Availability — Shambala Villas Bali</title>
+  <meta name="description" content="Check availability for Villa Lembongan and Villa Seminyak — two extraordinary private villas in Bali." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     NAVBAR
+     ════════════════════════════════════════ -->
+<nav class="navbar scrolled" id="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="nav-logo-link">
+      <img src="images/shared/logo.png" alt="Shambala Villas" class="nav-logo" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="lembongan.html" class="nav-link">Villa Lembongan</a></li>
+      <li><a href="seminyak.html" class="nav-link">Villa Seminyak</a></li>
+      <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="booking.html" class="nav-link active">Availability</a></li>
+      <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      <li><a href="index.html#contact" class="nav-book">Book Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="lembongan.html" class="nav-link">Villa Lembongan</a>
+  <a href="seminyak.html" class="nav-link">Villa Seminyak</a>
+  <a href="gallery.html" class="nav-link">Gallery</a>
+  <a href="booking.html" class="nav-link">Availability</a>
+  <a href="index.html#contact" class="nav-link">Contact</a>
+  <a href="index.html#contact" class="nav-book">Book Now</a>
+</div>
+
+<!-- ════════════════════════════════════════
+     HEADER
+     ════════════════════════════════════════ -->
+<section class="gallery-hero" style="padding-top:140px">
+  <span class="label reveal">Calendar</span>
+  <h1 class="reveal reveal-d1">Availability</h1>
+  <span class="rule rule-c reveal reveal-d2" style="margin-top:1.25rem"></span>
+  <p class="reveal reveal-d3" style="max-width:500px;margin:0.75rem auto 0;color:var(--charcoal-lt)">
+    Check the availability of both villas. Striped dates are occupied. Contact us to confirm and enquire about your preferred dates.
+  </p>
+</section>
+
+<!-- ════════════════════════════════════════
+     LEMBONGAN CALENDAR
+     ════════════════════════════════════════ -->
+<section class="availability-section" style="padding-top:70px">
+  <div class="container">
+    <span class="label reveal">Villa Lembongan</span>
+    <h2 class="reveal reveal-d1">Nusa Lembongan Availability</h2>
+    <div class="cal-nav-row">
+      <button class="cal-nav-main" id="bk-lem-prev">&#8592; Previous</button>
+      <button class="cal-nav-main" id="bk-lem-next">Next &#8594;</button>
+    </div>
+    <div class="cal-months-wrap" id="bk-lem-cal-wrap"></div>
+    <div class="cal-legend">
+      <div class="cal-legend-item"><div class="cal-legend-swatch available"></div> Available</div>
+      <div class="cal-legend-item"><div class="cal-legend-swatch occupied"></div> Occupied</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     SEMINYAK CALENDAR
+     ════════════════════════════════════════ -->
+<section class="availability-section" style="padding-top:0;background:var(--cream)">
+  <div class="container">
+    <span class="label reveal">Villa Seminyak</span>
+    <h2 class="reveal reveal-d1">Seminyak Availability</h2>
+    <div class="cal-nav-row">
+      <button class="cal-nav-main" id="bk-sem-prev">&#8592; Previous</button>
+      <button class="cal-nav-main" id="bk-sem-next">Next &#8594;</button>
+    </div>
+    <div class="cal-months-wrap" id="bk-sem-cal-wrap"></div>
+    <div class="cal-legend">
+      <div class="cal-legend-item"><div class="cal-legend-swatch available"></div> Available</div>
+      <div class="cal-legend-item"><div class="cal-legend-swatch occupied"></div> Occupied</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     BOOKING CTA
+     ════════════════════════════════════════ -->
+<section class="booking-cta">
+  <div class="container">
+    <span class="label" style="color:var(--gold)">Reserve Your Stay</span>
+    <h2>Ready to Book?</h2>
+    <p>Contact our villa concierge team with your preferred dates and we'll confirm availability within 24 hours.</p>
+    <a href="lembongan.html#enquiry" class="btn btn-gold">Enquire — Villa Lembongan</a>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="images/shared/logo.png" alt="Shambala Villas" class="footer-logo" />
+        <p class="footer-desc">Two extraordinary private villas in Bali, crafted for those who seek beauty, privacy, and the art of slow living.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Our Villas</h4>
+        <ul>
+          <li><a href="lembongan.html">Villa Lembongan</a></li>
+          <li><a href="seminyak.html">Villa Seminyak</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Information</h4>
+        <ul>
+          <li><a href="index.html#contact">Rates &amp; Availability</a></li>
+          <li><a href="index.html#contact">Booking Enquiry</a></li>
+          <li><a href="index.html#contact">Private Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="https://instagram.com/theshambalalembongan" target="_blank">@theshambalalembongan</a></li>
+          <li><a href="https://instagram.com/shambalavillabali" target="_blank">@shambalavillabali</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-btm">
+      <p class="footer-copy">&copy; 2026 Shambala Villas Bali. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/theshambalalembongan" target="_blank">Instagram Lembongan</a>
+        <a href="https://instagram.com/shambalavillabali" target="_blank">Instagram Seminyak</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════════
+     SCRIPTS
+     ════════════════════════════════════════ -->
+<script>
+  // Navbar scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    hamburger.classList.remove('open'); mobileMenu.classList.remove('open');
+  }));
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Calendar helper
+  function buildCalendar(containerId, prevBtnId, nextBtnId, villaKey, availData) {
+    let offsetMonths = 0;
+
+    function renderCalendars() {
+      const wrap = document.getElementById(containerId);
+      wrap.innerHTML = '';
+      const today = new Date();
+      for (let i = 0; i < 3; i++) {
+        const d = new Date(today.getFullYear(), today.getMonth() + offsetMonths + i, 1);
+        wrap.appendChild(buildMonth(d, today));
+      }
+    }
+
+    function buildMonth(date, today) {
+      const year = date.getFullYear();
+      const month = date.getMonth();
+      const wrap = document.createElement('div');
+      wrap.className = 'cal-wrap';
+      const title = new Date(year, month, 1).toLocaleString('default', { month: 'long', year: 'numeric' });
+      wrap.innerHTML = '<div class="cal-header"><span class="cal-title">' + title + '</span></div>';
+      const grid = document.createElement('div');
+      grid.className = 'cal-grid';
+      const days = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+      days.forEach(d => { const h = document.createElement('div'); h.className = 'cal-day-header'; h.textContent = d; grid.appendChild(h); });
+      const firstDay = new Date(year, month, 1).getDay();
+      const startOffset = (firstDay === 0) ? 6 : firstDay - 1;
+      for (let e = 0; e < startOffset; e++) {
+        const empty = document.createElement('div'); empty.className = 'cal-cell empty'; grid.appendChild(empty);
+      }
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      for (let day = 1; day <= daysInMonth; day++) {
+        const cell = document.createElement('div');
+        cell.className = 'cal-cell';
+        const key = year + '-' + String(month+1).padStart(2,'0') + '-' + String(day).padStart(2,'0');
+        if (availData[key] === 'occupied') cell.classList.add('occupied');
+        const isToday = (today.getFullYear() === year && today.getMonth() === month && today.getDate() === day);
+        if (isToday) cell.classList.add('today');
+        cell.textContent = day;
+        grid.appendChild(cell);
+      }
+      wrap.appendChild(grid);
+      return wrap;
+    }
+
+    document.getElementById(prevBtnId).addEventListener('click', () => { offsetMonths--; renderCalendars(); });
+    document.getElementById(nextBtnId).addEventListener('click', () => { offsetMonths++; renderCalendars(); });
+    renderCalendars();
+  }
+
+  fetch('data/availability.json')
+    .then(r => r.json())
+    .then(data => {
+      buildCalendar('bk-lem-cal-wrap', 'bk-lem-prev', 'bk-lem-next', 'lembongan', data.lembongan || {});
+      buildCalendar('bk-sem-cal-wrap', 'bk-sem-prev', 'bk-sem-next', 'seminyak', data.seminyak || {});
+    })
+    .catch(() => {
+      buildCalendar('bk-lem-cal-wrap', 'bk-lem-prev', 'bk-lem-next', 'lembongan', {});
+      buildCalendar('bk-sem-cal-wrap', 'bk-sem-prev', 'bk-sem-next', 'seminyak', {});
+    });
+</script>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/6282247675859" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </svg>
+  <span class="wa-tooltip">Chat with us</span>
+</a>
+</body>
+</html>

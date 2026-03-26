@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Villa Seminyak — Shambala Villas Bali</title>
   <meta name="description" content="A five-bedroom private villa in the heart of Seminyak. 20-metre pool, traditional joglo architecture, lush tropical gardens, private chef." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -19,11 +23,12 @@
     </a>
     <ul class="nav-links">
       <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="lembongan.html" class="nav-link">Lembongan</a></li>
-      <li><a href="seminyak.html" class="nav-link active">Seminyak</a></li>
+      <li><a href="lembongan.html" class="nav-link">Villa Lembongan</a></li>
+      <li><a href="seminyak.html" class="nav-link active">Villa Seminyak</a></li>
       <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="booking.html" class="nav-link">Availability</a></li>
       <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-      <li><a href="index.html#contact" class="nav-book">Book Now</a></li>
+      <li><a href="#enquiry" class="nav-book">Book Now</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -33,11 +38,12 @@
 
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html" class="nav-link">Home</a>
-  <a href="lembongan.html" class="nav-link">Lembongan</a>
-  <a href="seminyak.html" class="nav-link">Seminyak</a>
+  <a href="lembongan.html" class="nav-link">Villa Lembongan</a>
+  <a href="seminyak.html" class="nav-link">Villa Seminyak</a>
   <a href="gallery.html" class="nav-link">Gallery</a>
+  <a href="booking.html" class="nav-link">Availability</a>
   <a href="index.html#contact" class="nav-link">Contact</a>
-  <a href="index.html#contact" class="nav-book">Book Now</a>
+  <a href="#enquiry" class="nav-book">Book Now</a>
 </div>
 
 <!-- ════════════════════════════════════════
@@ -70,7 +76,7 @@
         <p>A spectacular 20-metre swimming pool forms the heart of the estate, flanked by sun loungers, an outdoor dining pavilion, and a BBQ terrace shaded by towering palms. Five generous ensuite bedrooms, each with its own character and garden outlook, ensure total privacy for every guest.</p>
         <p>Just minutes from Oberoi Street, Ku De Ta, and Seminyak's finest dining, yet completely removed from the world — a rare balance that only Shambala can offer.</p>
         <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
-          <a href="index.html#contact" class="btn btn-gold">Enquire Now</a>
+          <a href="#enquiry" class="btn btn-gold">Enquire Now</a>
           <a href="gallery.html" class="btn btn-outline-dk">View Gallery</a>
         </div>
       </div>
@@ -202,62 +208,50 @@
 
       <div class="villa-review-card reveal reveal-d1">
         <div class="review-stars">
-          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <p class="review-text">"Absolutely incredible villa — the pool is stunning and the chef prepared the most amazing meals every evening. The staff anticipated our every need. We will be back!"</p>
-        <div class="review-author">
-          <div class="review-name">Rob</div>
-          <span class="review-badge badge-google">Google</span>
-        </div>
+        <p class="review-text">"The property was beautiful. The pool was a huge hit! Each bedroom and bathroom was spectacular. I was especially in awe of the master bathroom. The staff were what dreams are made of. We were 11 of us. Best vacation yet!"</p>
+        <span class="review-name">Rob Taylor</span>
       </div>
 
       <div class="villa-review-card reveal reveal-d2">
         <div class="review-stars">
-          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <p class="review-text">"We spent a week at Villa Seminyak for our honeymoon and it was everything we dreamed of. The joglo architecture is breathtaking and the location is perfect — close to everything but so peaceful inside."</p>
-        <div class="review-author">
-          <div class="review-name">Marine</div>
-          <span class="review-badge badge-google">Google</span>
-        </div>
+        <p class="review-text">"The villa's design is authentic, beautifully maintained, very clean, and super spacious. Just a 5-minute walk to the beach. We had a fun barbecue dinner in the outdoor dining area by the pool and enjoyed a massage in the villa's private spa room."</p>
+        <span class="review-name">Marine Charlot</span>
       </div>
 
       <div class="villa-review-card reveal reveal-d3">
         <div class="review-stars">
-          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <p class="review-text">"Brought the whole family — grandparents, kids, everyone. The villa handled 10 of us with ease. The private chef was a highlight; the kids still talk about his breakfasts. Cannot recommend enough."</p>
-        <div class="review-author">
-          <div class="review-name">Angus</div>
-          <span class="review-badge badge-google">Google</span>
-        </div>
+        <p class="review-text">"The accommodation was outstanding, offering both comfort and luxury. The food was delicious, and the service was absolutely second to none. The villa's pool and grounds were simply amazing."</p>
+        <span class="review-name">Angus Patterson</span>
       </div>
 
       <div class="villa-review-card reveal reveal-d4">
         <div class="review-stars">
-          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="12" height="12" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <p class="review-text">"One of the most beautiful places I've ever stayed. The pool, the gardens, the architecture — it's like nothing else in Seminyak. Service was warm and impeccable from start to finish."</p>
-        <div class="review-author">
-          <div class="review-name">Anonymous</div>
-          <span class="review-badge badge-google">Google</span>
-        </div>
+        <p class="review-text">"The grounds, rooms and staff are all 5 star. Itta and Sandy were amazing, they went above and beyond. The Villa is well situated, only a few minutes walk to the beach."</p>
+        <span class="review-name">Anonymous</span>
       </div>
 
     </div>
@@ -325,6 +319,101 @@
 </section>
 
 <!-- ════════════════════════════════════════
+     VILLA DETAILS ACCORDION
+     ════════════════════════════════════════ -->
+<section class="accordion-section">
+  <div class="container">
+    <span class="label reveal">Villa Details</span>
+    <h2 class="reveal reveal-d1">Everything You Need to Know</h2>
+    <div class="accordion-list">
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" type="button">
+          Services included
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            Dedicated villa manager for check-in and assistance. Welcome drink and fresh towels upon arrival. Daily breakfast from selected menu (8:00 AM to 10:00 AM). Daily housekeeping (7:00 AM to 8:00 PM). Villa manager reachable anytime. Night security guard (9:00 PM to 6:00 AM).
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" type="button">
+          Bedrooms
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            Master Bedroom with hand-carved antique canopy bed, Joglo timber ceiling, walk-in closet, lounge area, ensuite semi-open bathroom with twin stone bathtubs. Bedroom 2 with king-size bed, garden views, walk-in closet, ensuite bathroom. Bedroom 3 with king-size bed, private outdoor deck overlooking pool, ensuite bathroom. Bedroom 4 with king-size bed, ensuite bathroom with rain shower. Bedroom 5 with king-size bed, direct garden and pool view, ensuite bathroom with natural elements.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" type="button">
+          Living spaces
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            Grand open-plan living pavilion with antique Joglo structure and soaring hand-carved timber ceilings. Fully equipped modern kitchen. Large bespoke dining table. Private cinema room. Second living room. Outdoor BBQ and dining area. Poolside seating areas.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" type="button">
+          Extras on request
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            Private chef. Outdoor BBQ arrangements. In-villa massage treatments. Private yoga, boxing, and wellness sessions. Mini bar selections. Babysitting services. Pool fence hire. Children's pool castle and floats.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" type="button">
+          Check-in and check-out
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            Check-in from 2:00 PM. Check-out until 11:00 AM. Luggage storage available.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     AVAILABILITY CALENDAR
+     ════════════════════════════════════════ -->
+<section class="availability-section">
+  <div class="container">
+    <div class="cal-hero-header" style="background-image: url('images/seminyak/shambalavillabali_1670736230_2990674721196902341_52884410060_1.jpg')">
+      <div class="cal-hero-overlay"></div>
+      <span class="label" style="color:var(--gold)">Seminyak</span>
+      <h2 style="color:var(--cream)">Check Availability</h2>
+    </div>
+    <div class="cal-nav-row" style="margin-top:2rem">
+      <button class="cal-nav-main" id="sem-prev">&#8592; Previous</button>
+      <button class="cal-nav-main" id="sem-next">Next &#8594;</button>
+    </div>
+    <div class="cal-months-wrap" id="sem-cal-wrap"></div>
+    <div class="cal-legend">
+      <div class="cal-legend-item"><div class="cal-legend-swatch available"></div> Available</div>
+      <div class="cal-legend-item"><div class="cal-legend-swatch occupied"></div> Occupied</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
      LOCATION
      ════════════════════════════════════════ -->
 <section class="location-section">
@@ -333,13 +422,81 @@
     <h2 class="reveal reveal-d1">Seminyak, Bali</h2>
     <p class="reveal reveal-d2" style="max-width:580px;margin-top:1rem">Steps from Oberoi Street and Bali's finest restaurants, beach clubs, and boutiques — yet tucked behind private gates where the noise of the world cannot follow. Seminyak is Bali's most glamorous address, and Villa Seminyak sits at its heart.</p>
   </div>
-  <div class="map-wrap reveal" style="margin-top:3rem">
-    <iframe
-      src="https://maps.google.com/maps?q=-8.6867097,115.1592329&z=17&output=embed"
-      allowfullscreen
-      loading="lazy"
-      title="Villa Seminyak location">
-    </iframe>
+  <div style="margin-top:3rem">
+    <div id="villa-map" style="width:100%;height:440px;border-radius:4px;"></div>
+    <div class="map-details">
+      <div>
+        <div class="map-detail-name">Seminyak</div>
+        <div class="map-detail-addr">Jalan Kayu Aya, Seminyak, Kuta, Bali 80361</div>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=-8.6867097,115.1592329" target="_blank" rel="noopener" class="map-directions-link">Get directions →</a>
+      </div>
+      <div class="map-detail-dist">~25 min by car from Ngurah Rai Airport</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ ENQUIRY FORM ════ -->
+<section class="contact-section villa-enquiry-section" id="enquiry">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <span class="label">Enquire</span>
+        <h2>Plan Your Stay</h2>
+        <span class="rule rule-l" style="margin-top:1.25rem;margin-bottom:1.5rem"></span>
+        <p>Share your travel dates and preferences and our villa manager will respond within 24 hours with a personalised proposal.</p>
+        <div class="c-detail">
+          <div class="c-detail-lbl">Villa</div>
+          <div class="c-detail-val">Villa Seminyak, Seminyak, Bali</div>
+        </div>
+        <div class="c-detail">
+          <div class="c-detail-lbl">WhatsApp</div>
+          <div class="c-detail-val"><a href="https://wa.me/6282247675859" style="color:var(--gold)">+62 822 4767 5859</a></div>
+        </div>
+      </div>
+      <div class="contact-form reveal reveal-d2">
+        <form id="enquiryFormSeminyak" onsubmit="submitVillaForm(event,'enquiryFormSeminyak','successSeminyak')">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sname">Full Name</label>
+              <input type="text" id="sname" name="name" required placeholder="Your name" />
+            </div>
+            <div class="form-group">
+              <label for="semail">Email Address</label>
+              <input type="email" id="semail" name="email" required placeholder="your@email.com" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="scheckin">Check-In Date</label>
+              <input type="date" id="scheckin" name="checkin" />
+            </div>
+            <div class="form-group">
+              <label for="scheckout">Check-Out Date</label>
+              <input type="date" id="scheckout" name="checkout" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="smessage">Your Message</label>
+            <textarea id="smessage" name="message" placeholder="Group size, special requests…"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label-static">Additional Services</label>
+            <div class="service-checks">
+              <label class="svc-check"><input type="checkbox" name="services" value="chef" /><span>Private Chef</span></label>
+              <label class="svc-check"><input type="checkbox" name="services" value="boat" /><span>Private Boat</span></label>
+              <label class="svc-check"><input type="checkbox" name="services" value="airport" /><span>Airport Pick Up</span></label>
+              <label class="svc-check"><input type="checkbox" name="services" value="grocery" /><span>Grocery Shopping</span></label>
+              <label class="svc-check"><input type="checkbox" name="services" value="spa" /><span>Spa Booking</span></label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-gold">Send Enquiry</button>
+        </form>
+        <div id="successSeminyak" style="display:none">
+          <h3 style="font-family:var(--serif);font-size:1.6rem">Thank You</h3>
+          <p>Your enquiry has been received. Our villa manager will be in touch within 24 hours.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -351,7 +508,7 @@
     <span class="label" style="color:var(--gold)">Reserve Your Stay</span>
     <h2>Begin Your Seminyak Story</h2>
     <p>Contact our villa concierge team and we will design a stay perfectly suited to you.</p>
-    <a href="index.html#contact" class="btn btn-gold">Send a Booking Enquiry</a>
+    <a href="#enquiry" class="btn btn-gold">Send a Booking Enquiry</a>
   </div>
 </section>
 
@@ -498,6 +655,110 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Accordion
+  document.querySelectorAll('.accordion-trigger').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const body = this.nextElementSibling;
+      const isOpen = body.classList.contains('open');
+      document.querySelectorAll('.accordion-body').forEach(b => b.classList.remove('open'));
+      document.querySelectorAll('.accordion-trigger').forEach(t => t.classList.remove('active'));
+      if (!isOpen) {
+        body.classList.add('open');
+        this.classList.add('active');
+      }
+    });
+  });
+
+  // Calendar
+  (function() {
+    const VILLA = 'seminyak';
+    let offsetMonths = 0;
+    let occupiedDates = {};
+
+    fetch('data/availability.json')
+      .then(r => r.json())
+      .then(data => {
+        occupiedDates = data[VILLA] || {};
+        renderCalendars();
+      })
+      .catch(() => renderCalendars());
+
+    function renderCalendars() {
+      const wrap = document.getElementById('sem-cal-wrap');
+      wrap.innerHTML = '';
+      const today = new Date();
+      for (let i = 0; i < 3; i++) {
+        const d = new Date(today.getFullYear(), today.getMonth() + offsetMonths + i, 1);
+        wrap.appendChild(buildMonth(d, today));
+      }
+    }
+
+    function buildMonth(date, today) {
+      const year = date.getFullYear();
+      const month = date.getMonth();
+      const wrap = document.createElement('div');
+      wrap.className = 'cal-wrap';
+      const title = new Date(year, month, 1).toLocaleString('default', { month: 'long', year: 'numeric' });
+      wrap.innerHTML = '<div class="cal-header"><span class="cal-title">' + title + '</span></div>';
+      const grid = document.createElement('div');
+      grid.className = 'cal-grid';
+      const days = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+      days.forEach(d => { const h = document.createElement('div'); h.className = 'cal-day-header'; h.textContent = d; grid.appendChild(h); });
+      const firstDay = new Date(year, month, 1).getDay();
+      const startOffset = (firstDay === 0) ? 6 : firstDay - 1;
+      for (let e = 0; e < startOffset; e++) {
+        const empty = document.createElement('div'); empty.className = 'cal-cell empty'; grid.appendChild(empty);
+      }
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      for (let day = 1; day <= daysInMonth; day++) {
+        const cell = document.createElement('div');
+        cell.className = 'cal-cell';
+        const key = year + '-' + String(month+1).padStart(2,'0') + '-' + String(day).padStart(2,'0');
+        if (occupiedDates[key] === 'occupied') cell.classList.add('occupied');
+        const isToday = (today.getFullYear() === year && today.getMonth() === month && today.getDate() === day);
+        if (isToday) cell.classList.add('today');
+        cell.textContent = day;
+        grid.appendChild(cell);
+      }
+      wrap.appendChild(grid);
+      return wrap;
+    }
+
+    document.getElementById('sem-prev').addEventListener('click', () => { offsetMonths--; renderCalendars(); });
+    document.getElementById('sem-next').addEventListener('click', () => { offsetMonths++; renderCalendars(); });
+  })();
+
+  function submitVillaForm(e, formId, successId) {
+    e.preventDefault();
+    document.getElementById(formId).style.display = 'none';
+    document.getElementById(successId).style.display = 'block';
+  }
+</script>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/6282247675859" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </svg>
+  <span class="wa-tooltip">Chat with us</span>
+</a>
+
+<script src="js/config.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+<script>
+  mapboxgl.accessToken = MAPBOX_TOKEN;
+  const map = new mapboxgl.Map({
+    container: 'villa-map',
+    style: 'mapbox://styles/mapbox/outdoors-v12',
+    center: [115.1592329, -8.6867097],
+    zoom: 15,
+    scrollZoom: false
+  });
+  new mapboxgl.Marker({ color: '#B8956A' })
+    .setLngLat([115.1592329, -8.6867097])
+    .addTo(map);
+  map.addControl(new mapboxgl.NavigationControl(), 'top-right');
 </script>
 </body>
 </html>

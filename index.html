@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shambala Villas Bali — Luxury Private Villa Rentals</title>
   <meta name="description" content="Two extraordinary private villas in Bali — Villa Lembongan perched on sunset cliffs, Villa Seminyak in the heart of the island's most coveted address." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -19,9 +22,10 @@
     </a>
     <ul class="nav-links">
       <li><a href="index.html" class="nav-link active">Home</a></li>
-      <li><a href="lembongan.html" class="nav-link">Lembongan</a></li>
-      <li><a href="seminyak.html" class="nav-link">Seminyak</a></li>
+      <li><a href="lembongan.html" class="nav-link">Villa Lembongan</a></li>
+      <li><a href="seminyak.html" class="nav-link">Villa Seminyak</a></li>
       <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="booking.html" class="nav-link">Availability</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
       <li><a href="#contact" class="nav-book">Book Now</a></li>
     </ul>
@@ -34,9 +38,10 @@
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html" class="nav-link">Home</a>
-  <a href="lembongan.html" class="nav-link">Lembongan</a>
-  <a href="seminyak.html" class="nav-link">Seminyak</a>
+  <a href="lembongan.html" class="nav-link">Villa Lembongan</a>
+  <a href="seminyak.html" class="nav-link">Villa Seminyak</a>
   <a href="gallery.html" class="nav-link">Gallery</a>
+  <a href="booking.html" class="nav-link">Availability</a>
   <a href="#contact" class="nav-link" id="mobileContact">Contact</a>
   <a href="#contact" class="nav-book" id="mobileBook">Book Now</a>
 </div>
@@ -51,6 +56,7 @@
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <img src="images/shared/logo.png" alt="Shambala Villas" class="hero-logo" />
+    <div class="hero-brand">The Shambala Villas</div>
     <p class="hero-tagline">Where Luxury Meets Serenity</p>
   </div>
   <div class="scroll-hint">
@@ -159,31 +165,48 @@
 </section>
 
 <!-- ════════════════════════════════════════
-     PRESS / TESTIMONIALS
+     PRESS EDITORIAL
      ════════════════════════════════════════ -->
-<section class="press-section">
-  <div class="container">
-    <div class="section-hdr reveal">
-      <span class="label" style="text-align:center;display:block">As Featured In</span>
-      <h2 style="text-align:center">Recognised Excellence</h2>
-      <span class="rule rule-c" style="margin-top:1.5rem"></span>
+<section class="press-editorial">
+  <div class="press-editorial-hdr reveal">
+    <span class="label">As Featured In</span>
+    <h2 style="color:var(--white)">In the Press</h2>
+    <span class="rule rule-c" style="margin-top:1.5rem;background:var(--gold)"></span>
+  </div>
+
+  <!-- Feature 1: text left, photo right -->
+  <div class="press-feature reveal">
+    <div class="press-text">
+      <span class="press-pub-label">Luxury Travel Magazine</span>
+      <p class="press-pull-quote">Okay, so this one blows our mind! Hidden in the 'Golden Triangle' at the heart of Seminyak, Villa Shambala enjoys one of the most sought-after holiday villas in Bali. Can you imagine holidaying with your mates in this five-bedroom paradise?! This stylish oasis blends distinctive joglo style with spacious manicured lawns, immense swimming pools and opulent al fresco living areas. You'd probably never leave!</p>
+      <a href="https://www.luxurytravelmagazine.com/news-articles/trendiest-asia-luxury-villas" class="press-read-link" target="_blank" rel="noopener">Read article &#8594;</a>
     </div>
-    <div class="press-grid">
-      <div class="press-item reveal reveal-d1">
-        <p class="press-quote">Okay – so this one blows our mind! Hidden in the 'Golden Triangle' at the heart of Seminyak, Villa Shambala enjoys one of the most sought-after holiday villas in Bali – can you imagine holidaying with your mates in this five-bedroom paradise?! This stylish oasis blends distinctive joglo style with spacious manicured lawns, immense swimming pools and opulent al fresco living areas – you'd probably never leave!</p>
-        <div class="press-divider"></div>
-        <span class="press-source">Luxury Travel Magazine</span>
-      </div>
-      <div class="press-item reveal reveal-d2">
-        <p class="press-quote">Just minutes from the boutiques and restaurants of Seminyak, Villa Shambala boasts five elegant ensuite bedrooms. Enjoy massages in the spa room, watch a film in the media lounge, enjoy cocktails on the deck and unwind over a delicious dinner made by your own private chef. The gorgeous 20-metre pool will be a hit with kids and adults alike.</p>
-        <div class="press-divider"></div>
-        <span class="press-source">International Traveller</span>
-      </div>
-      <div class="press-item reveal reveal-d3">
-        <p class="press-quote">Fabulous from start to finish, a garden party at Villa Shambala in central Seminyak will have any island partygoer weak at the knees. This traditional, five-bedroom private villa borders a luxurious and utterly tropical 19-metre swimming pool, lined by palms, manicured lawns and even a poolside spa pavilion.</p>
-        <div class="press-divider"></div>
-        <span class="press-source">The Honeycombers</span>
-      </div>
+    <div class="press-photo">
+      <img src="images/seminyak/shambalavillabali_1670736230_2990674721196902341_52884410060_1.jpg" alt="Villa Shambala Seminyak" loading="lazy" />
+    </div>
+  </div>
+
+  <!-- Feature 2: photo left, text right -->
+  <div class="press-feature reverse reveal">
+    <div class="press-text">
+      <span class="press-pub-label">International Traveller</span>
+      <p class="press-pull-quote">Just minutes from the boutiques and restaurants of Seminyak, Villa Shambala boasts five elegant ensuite bedrooms. Enjoy massages in the spa room, watch a film in the media lounge, enjoy cocktails on the deck and unwind over a delicious dinner made by your own private chef. The gorgeous 20-metre pool will be a hit with kids and adults alike.</p>
+      <a href="https://www.internationaltraveller.com/asia/indonesia/bali/seminyak/best-villas-in-seminyak/" class="press-read-link" target="_blank" rel="noopener">Read article &#8594;</a>
+    </div>
+    <div class="press-photo">
+      <img src="images/seminyak/shambalavillabali_1670462036_2988374613089862684_52884410060_1.jpg" alt="Villa Shambala pool" loading="lazy" />
+    </div>
+  </div>
+
+  <!-- Feature 3: text left, photo right -->
+  <div class="press-feature reveal">
+    <div class="press-text">
+      <span class="press-pub-label">The Honeycombers</span>
+      <p class="press-pull-quote">Villa Shambala, best for a tropical garden party. Fabulous from start to finish, a garden party at Villa Shambala in central Seminyak will have any island partygoer weak at the knees. This traditional, five-bedroom private villa borders a luxurious and utterly tropical 19-metre swimming pool, lined by palms, manicured lawns and even a poolside spa pavilion.</p>
+      <a href="https://thehoneycombers.com/bali/best-party-villas-bali-seminyak-canggu-birthday-family-wedding/" class="press-read-link" target="_blank" rel="noopener">Read article &#8594;</a>
+    </div>
+    <div class="press-photo">
+      <img src="images/seminyak/shambalavillabali_1682490538_3089276998916089732_52884410060_1.jpg" alt="Villa Shambala gardens" loading="lazy" />
     </div>
   </div>
 </section>
@@ -205,19 +228,15 @@
       <div class="review-slide active">
         <div class="review-card">
           <div class="review-stars">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <p class="review-text">The villa itself is stunning — every detail is meticulously thought out, creating a luxurious yet comfortable environment. What really sets this place apart is the staff. They went out of their way to ensure we had everything we needed and more.</p>
+          <p class="review-text">Every detail is meticulously thought out, creating a luxurious yet comfortable environment. What really sets this place apart is the staff. They went out of their way to ensure we had everything we needed and more.</p>
           <div class="review-meta">
-            <span class="review-author">Danny &nbsp;·&nbsp; Villa Lembongan</span>
-            <span class="review-badge badge-google">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-              Google Reviews
-            </span>
+            <span class="review-name">Danny Allen-Page</span>
           </div>
         </div>
       </div>
@@ -225,19 +244,15 @@
       <div class="review-slide">
         <div class="review-card">
           <div class="review-stars">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <p class="review-text">The property was beautiful. The pool was a huge hit! Each bedroom and bathroom was spectacular. But the highlight by far was the staff — the chef, the housekeepers and the house manager were what dreams are made of.</p>
+          <p class="review-text">The property was beautiful. The pool was a huge hit! Each bedroom and bathroom was spectacular. But the highlight by far was the staff. The chef, the housekeepers and the house manager were what dreams are made of.</p>
           <div class="review-meta">
-            <span class="review-author">Rob &nbsp;·&nbsp; Villa Seminyak</span>
-            <span class="review-badge badge-google">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-              Google Reviews
-            </span>
+            <span class="review-name">Rob Taylor</span>
           </div>
         </div>
       </div>
@@ -245,19 +260,15 @@
       <div class="review-slide">
         <div class="review-card">
           <div class="review-stars">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
           <p class="review-text">Of all the places we stayed in Bali, this was by far the best. The decor is perfect. The place is designed with every detail in mind. The staff are incredible. Don't think twice, book this magical house.</p>
           <div class="review-meta">
-            <span class="review-author">Lisa &nbsp;·&nbsp; Villa Lembongan</span>
-            <span class="review-badge badge-google">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-              Google Reviews
-            </span>
+            <span class="review-name">Lisa Rotondi</span>
           </div>
         </div>
       </div>
@@ -343,6 +354,16 @@
           <div class="form-group">
             <label for="message">Your Message</label>
             <textarea id="message" name="message" placeholder="Tell us about your travel plans, group size, special requests…"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label-static">Additional Services</label>
+            <div class="service-checks">
+              <label class="svc-check"><input type="checkbox" name="services" value="chef" /><span>Private Chef</span></label>
+              <label class="svc-check"><input type="checkbox" name="services" value="boat" /><span>Private Boat</span></label>
+              <label class="svc-check"><input type="checkbox" name="services" value="airport" /><span>Airport Pick Up</span></label>
+              <label class="svc-check"><input type="checkbox" name="services" value="grocery" /><span>Grocery Shopping</span></label>
+              <label class="svc-check"><input type="checkbox" name="services" value="spa" /><span>Spa Booking</span></label>
+            </div>
           </div>
           <button type="submit" class="btn btn-gold">Send Enquiry</button>
         </form>
@@ -459,5 +480,13 @@
     document.getElementById('form-success').style.display = 'block';
   }
 </script>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/6282247675859" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </svg>
+  <span class="wa-tooltip">Chat with us</span>
+</a>
 </body>
 </html>
