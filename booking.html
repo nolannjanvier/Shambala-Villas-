@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+
+
 </head>
 <body>
 
@@ -151,94 +152,7 @@
   </div>
 </footer>
 
-<!-- ════════════════════════════════════════
-     SCRIPTS
-     ════════════════════════════════════════ -->
-<script>
-  // Navbar scroll
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 60);
-  });
-
-  // Hamburger
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-  });
-  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    hamburger.classList.remove('open'); mobileMenu.classList.remove('open');
-  }));
-
-  // Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Calendar helper
-  function buildCalendar(containerId, prevBtnId, nextBtnId, villaKey, availData) {
-    let offsetMonths = 0;
-
-    function renderCalendars() {
-      const wrap = document.getElementById(containerId);
-      wrap.innerHTML = '';
-      const today = new Date();
-      for (let i = 0; i < 3; i++) {
-        const d = new Date(today.getFullYear(), today.getMonth() + offsetMonths + i, 1);
-        wrap.appendChild(buildMonth(d, today));
-      }
-    }
-
-    function buildMonth(date, today) {
-      const year = date.getFullYear();
-      const month = date.getMonth();
-      const wrap = document.createElement('div');
-      wrap.className = 'cal-wrap';
-      const title = new Date(year, month, 1).toLocaleString('default', { month: 'long', year: 'numeric' });
-      wrap.innerHTML = '<div class="cal-header"><span class="cal-title">' + title + '</span></div>';
-      const grid = document.createElement('div');
-      grid.className = 'cal-grid';
-      const days = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
-      days.forEach(d => { const h = document.createElement('div'); h.className = 'cal-day-header'; h.textContent = d; grid.appendChild(h); });
-      const firstDay = new Date(year, month, 1).getDay();
-      const startOffset = (firstDay === 0) ? 6 : firstDay - 1;
-      for (let e = 0; e < startOffset; e++) {
-        const empty = document.createElement('div'); empty.className = 'cal-cell empty'; grid.appendChild(empty);
-      }
-      const daysInMonth = new Date(year, month + 1, 0).getDate();
-      for (let day = 1; day <= daysInMonth; day++) {
-        const cell = document.createElement('div');
-        cell.className = 'cal-cell';
-        const key = year + '-' + String(month+1).padStart(2,'0') + '-' + String(day).padStart(2,'0');
-        if (availData[key] === 'occupied') cell.classList.add('occupied');
-        const isToday = (today.getFullYear() === year && today.getMonth() === month && today.getDate() === day);
-        if (isToday) cell.classList.add('today');
-        cell.textContent = day;
-        grid.appendChild(cell);
-      }
-      wrap.appendChild(grid);
-      return wrap;
-    }
-
-    document.getElementById(prevBtnId).addEventListener('click', () => { offsetMonths--; renderCalendars(); });
-    document.getElementById(nextBtnId).addEventListener('click', () => { offsetMonths++; renderCalendars(); });
-    renderCalendars();
-  }
-
-  fetch('data/availability.json')
-    .then(r => r.json())
-    .then(data => {
-      buildCalendar('bk-lem-cal-wrap', 'bk-lem-prev', 'bk-lem-next', 'lembongan', data.lembongan || {});
-      buildCalendar('bk-sem-cal-wrap', 'bk-sem-prev', 'bk-sem-next', 'seminyak', data.seminyak || {});
-    })
-    .catch(() => {
-      buildCalendar('bk-lem-cal-wrap', 'bk-lem-prev', 'bk-lem-next', 'lembongan', {});
-      buildCalendar('bk-sem-cal-wrap', 'bk-sem-prev', 'bk-sem-next', 'seminyak', {});
-    });
-</script>
+<script type="module" src="/src/booking.ts"></script>
 
 <!-- WhatsApp Float -->
 <a href="https://wa.me/6282247675859" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">

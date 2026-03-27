@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+
 </head>
 <body>
 
@@ -421,65 +421,7 @@
   </div>
 </footer>
 
-<!-- ════════════════════════════════════════
-     SCRIPTS
-     ════════════════════════════════════════ -->
-<script>
-  // Navbar scroll
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 60);
-  });
-
-  // Hamburger
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-  });
-  // Close mobile menu on link click
-  mobileMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-    });
-  });
-
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.12 });
-  reveals.forEach(el => observer.observe(el));
-
-  // Review carousel
-  (function() {
-    const slides = document.querySelectorAll('.review-slide');
-    const dots   = document.querySelectorAll('.carousel-dot');
-    let cur = 0, timer;
-    function show(n) {
-      slides[cur].classList.remove('active');
-      dots[cur].classList.remove('active');
-      cur = (n + slides.length) % slides.length;
-      slides[cur].classList.add('active');
-      dots[cur].classList.add('active');
-    }
-    function start() { timer = setInterval(() => show(cur + 1), 5000); }
-    function reset()  { clearInterval(timer); start(); }
-    document.getElementById('nextBtn').addEventListener('click', () => { show(cur + 1); reset(); });
-    document.getElementById('prevBtn').addEventListener('click', () => { show(cur - 1); reset(); });
-    dots.forEach(d => d.addEventListener('click', () => { show(+d.dataset.idx); reset(); }));
-    start();
-  })();
-
-  // Form submit
-  function submitForm(e) {
-    e.preventDefault();
-    document.getElementById('enquiryForm').style.display = 'none';
-    document.getElementById('form-success').style.display = 'block';
-  }
-</script>
+<script type="module" src="/src/home.ts"></script>
 
 <!-- WhatsApp Float -->
 <a href="https://wa.me/6282247675859" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">

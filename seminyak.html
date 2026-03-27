@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet" />
+
+
 </head>
 <body>
 
@@ -567,174 +567,7 @@
   <div class="lb-count" id="lb-count"></div>
 </div>
 
-<!-- ════════════════════════════════════════
-     SCRIPTS
-     ════════════════════════════════════════ -->
-<script>
-  const images = [
-    'images/seminyak/shambalavillabali_1650000064_2816727150481957683_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1650098269_2817550956121490971_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1651908037_2832732394051546210_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1651916836_2832806198383715403_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1670231906_2986444142716725154_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1670462036_2988374613089862684_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1670482068_2988542657773266270_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1670736230_2990674721196902341_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1674805499_3024810222090515448_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1677373908_3046355602491495638_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1679969020_3068124980356565166_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1681091887_3077544266571276183_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1682490538_3089276998916089732_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1684021685_3102121191725781675_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1692517523_3173389447215966849_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1695695092_3200044833687615585_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1697001833_3211006567273315998_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1708471698_3307222773247932665_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1720229181_3405851689851967490_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1724581344_3442360273715475835_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1730379712_3491000513842529129_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1734343012_3524247077527245414_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1740216864_3573520520898001275_52884410060_1.jpg',
-    'images/seminyak/shambalavillabali_1743734679_3603030095885444689_52884410060_1.jpg',
-  ];
-
-  let current = 0;
-
-  function openLightbox(i) {
-    current = i;
-    updateLightbox();
-    document.getElementById('lightbox').classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeLightbox() {
-    document.getElementById('lightbox').classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  function shiftLightbox(dir) {
-    current = (current + dir + images.length) % images.length;
-    updateLightbox();
-  }
-
-  function updateLightbox() {
-    document.getElementById('lb-img').src = images[current];
-    document.getElementById('lb-count').textContent = (current + 1) + ' / ' + images.length;
-  }
-
-  document.getElementById('lightbox').addEventListener('click', function(e) {
-    if (e.target === this) closeLightbox();
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (!document.getElementById('lightbox').classList.contains('active')) return;
-    if (e.key === 'ArrowRight') shiftLightbox(1);
-    if (e.key === 'ArrowLeft')  shiftLightbox(-1);
-    if (e.key === 'Escape')     closeLightbox();
-  });
-
-  // Navbar scroll
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 60);
-  });
-
-  // Hamburger
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-  });
-  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    hamburger.classList.remove('open'); mobileMenu.classList.remove('open');
-  }));
-
-  // Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Accordion
-  document.querySelectorAll('.accordion-trigger').forEach(btn => {
-    btn.addEventListener('click', function() {
-      const body = this.nextElementSibling;
-      const isOpen = body.classList.contains('open');
-      document.querySelectorAll('.accordion-body').forEach(b => b.classList.remove('open'));
-      document.querySelectorAll('.accordion-trigger').forEach(t => t.classList.remove('active'));
-      if (!isOpen) {
-        body.classList.add('open');
-        this.classList.add('active');
-      }
-    });
-  });
-
-  // Calendar
-  (function() {
-    const VILLA = 'seminyak';
-    let offsetMonths = 0;
-    let occupiedDates = {};
-
-    fetch('data/availability.json')
-      .then(r => r.json())
-      .then(data => {
-        occupiedDates = data[VILLA] || {};
-        renderCalendars();
-      })
-      .catch(() => renderCalendars());
-
-    function renderCalendars() {
-      const wrap = document.getElementById('sem-cal-wrap');
-      wrap.innerHTML = '';
-      const today = new Date();
-      for (let i = 0; i < 3; i++) {
-        const d = new Date(today.getFullYear(), today.getMonth() + offsetMonths + i, 1);
-        wrap.appendChild(buildMonth(d, today));
-      }
-    }
-
-    function buildMonth(date, today) {
-      const year = date.getFullYear();
-      const month = date.getMonth();
-      const wrap = document.createElement('div');
-      wrap.className = 'cal-wrap';
-      const title = new Date(year, month, 1).toLocaleString('default', { month: 'long', year: 'numeric' });
-      wrap.innerHTML = '<div class="cal-header"><span class="cal-title">' + title + '</span></div>';
-      const grid = document.createElement('div');
-      grid.className = 'cal-grid';
-      const days = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
-      days.forEach(d => { const h = document.createElement('div'); h.className = 'cal-day-header'; h.textContent = d; grid.appendChild(h); });
-      const firstDay = new Date(year, month, 1).getDay();
-      const startOffset = (firstDay === 0) ? 6 : firstDay - 1;
-      for (let e = 0; e < startOffset; e++) {
-        const empty = document.createElement('div'); empty.className = 'cal-cell empty'; grid.appendChild(empty);
-      }
-      const daysInMonth = new Date(year, month + 1, 0).getDate();
-      for (let day = 1; day <= daysInMonth; day++) {
-        const cell = document.createElement('div');
-        cell.className = 'cal-cell';
-        const key = year + '-' + String(month+1).padStart(2,'0') + '-' + String(day).padStart(2,'0');
-        if (occupiedDates[key] === 'occupied') cell.classList.add('occupied');
-        const isToday = (today.getFullYear() === year && today.getMonth() === month && today.getDate() === day);
-        if (isToday) cell.classList.add('today');
-        cell.textContent = day;
-        grid.appendChild(cell);
-      }
-      wrap.appendChild(grid);
-      return wrap;
-    }
-
-    document.getElementById('sem-prev').addEventListener('click', () => { offsetMonths--; renderCalendars(); });
-    document.getElementById('sem-next').addEventListener('click', () => { offsetMonths++; renderCalendars(); });
-  })();
-
-  function submitVillaForm(e, formId, successId) {
-    e.preventDefault();
-    document.getElementById(formId).style.display = 'none';
-    document.getElementById(successId).style.display = 'block';
-  }
-</script>
+<script type="module" src="/src/seminyak.ts"></script>
 
 <!-- WhatsApp Float -->
 <a href="https://wa.me/6282247675859" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
@@ -743,22 +576,5 @@
   </svg>
   <span class="wa-tooltip">Chat with us</span>
 </a>
-
-<script src="js/config.js"></script>
-<script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
-<script>
-  mapboxgl.accessToken = MAPBOX_TOKEN;
-  const map = new mapboxgl.Map({
-    container: 'villa-map',
-    style: 'mapbox://styles/mapbox/outdoors-v12',
-    center: [115.1592329, -8.6867097],
-    zoom: 15,
-    scrollZoom: false
-  });
-  new mapboxgl.Marker({ color: '#B8956A' })
-    .setLngLat([115.1592329, -8.6867097])
-    .addTo(map);
-  map.addControl(new mapboxgl.NavigationControl(), 'top-right');
-</script>
 </body>
 </html>
